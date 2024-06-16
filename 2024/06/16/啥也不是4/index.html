@@ -374,8 +374,7 @@
     </div>
     <article class="article-content markdown-body">
       <ul>
-<li><p>基本权限</p>
-<ul>
+<li><h1 id="基本权限"><a href="#基本权限" class="headerlink" title="基本权限"></a>基本权限</h1><ul>
 <li><p>ls -l initial-setup-ks.cfg</p>
 </li>
 <li><p>-rw-r–r–. 1 robin east 1278 7月  18 14:01 initial-setup-ks.cfg</p>
@@ -392,8 +391,7 @@
 </li>
 </ul>
 </li>
-<li><p>对于文件:</p>
-<ul>
+<li><h1 id="对于文件"><a href="#对于文件" class="headerlink" title="对于文件:"></a>对于文件:</h1><ul>
 <li><p>r			读	cat  head tail….</p>
 </li>
 <li><p>w		写	vim  vi  &gt; &gt;&gt;</p>
@@ -402,8 +400,7 @@
 </li>
 </ul>
 </li>
-<li><p>对于目录:</p>
-<ul>
+<li><h1 id="对于目录"><a href="#对于目录" class="headerlink" title="对于目录:"></a>对于目录:</h1><ul>
 <li><p>r			读	ls			r   只能看文件名   r-x看详细信息</p>
 </li>
 <li><p>w		写	touch mkdir  rm    -wx可以删除确定文件名的文件   rwx删除所有文件</p>
@@ -415,8 +412,7 @@
 </li>
 </ul>
 </li>
-<li><p>命令用法</p>
-<ul>
+<li><h1 id="命令用法"><a href="#命令用法" class="headerlink" title="命令用法"></a>命令用法</h1><ul>
 <li><p>chmod u+r  file&#x2F;dir</p>
 </li>
 <li><p>chmod u+r,g+w,o-x file&#x2F;dir</p>
@@ -439,8 +435,7 @@
 </li>
 </ul>
 </li>
-<li><p>数字方式</p>
-<ul>
+<li><h1 id="数字方式"><a href="#数字方式" class="headerlink" title="数字方式"></a>数字方式</h1><ul>
 <li><p>r	4</p>
 </li>
 <li><p>w	2</p>
@@ -479,8 +474,7 @@
 </li>
 </ul>
 </li>
-<li><p>权限反掩码 </p>
-<ul>
+<li><h1 id="权限反掩码"><a href="#权限反掩码" class="headerlink" title="权限反掩码"></a>权限反掩码</h1><ul>
 <li><p>root用户umask		0022</p>
 </li>
 <li><p>普通用户umask		0002</p>
@@ -509,13 +503,11 @@
 </li>
 </ul>
 </li>
-<li><p>递归修改权限</p>
-<ul>
+<li><h1 id="递归修改权限"><a href="#递归修改权限" class="headerlink" title="递归修改权限"></a>递归修改权限</h1><ul>
 <li>[root@localhost tmp]# chmod -R 777 &#x2F;tmp&#x2F;test&#x2F;</li>
 </ul>
 </li>
-<li><p>修改拥有者与所属组:</p>
-<ul>
+<li><h1 id="修改拥有者与所属组"><a href="#修改拥有者与所属组" class="headerlink" title="修改拥有者与所属组:"></a>修改拥有者与所属组:</h1><ul>
 <li><p>[root@localhost tmp]# chown robin aa.txt   修改拥有者</p>
 </li>
 <li><p>[root@localhost tmp]# chgrp zorro aa.txt    修改所属组</p>
@@ -534,8 +526,7 @@
 </li>
 </ul>
 </li>
-<li><p>高级权限:</p>
-<ul>
+<li><h1 id="高级权限"><a href="#高级权限" class="headerlink" title="高级权限:"></a>高级权限:</h1><ul>
 <li><p>suid: set  user id</p>
 </li>
 <li><p>功能: 任何用户再执行拥有suid权限的二进制可执行文件(命令)时,都以root管理员的身份去执行</p>
@@ -558,8 +549,7 @@
 </li>
 </ul>
 </li>
-<li><p>sticky权限:</p>
-<ul>
+<li><h1 id="sticky权限"><a href="#sticky权限" class="headerlink" title="sticky权限:"></a>sticky权限:</h1><ul>
 <li><p>1.在&#x2F;tmp目录下创建目录test  设置&#x2F;tmp&#x2F;test权限为777</p>
 </li>
 <li><p>[root@localhost ~]# chmod 777 &#x2F;tmp&#x2F;test&#x2F;</p>
@@ -619,7 +609,7 @@
     <div class="article-catelogue--wrapper">
       <div class="catelogue catelogue-1">
         <h3>目录</h3>
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%9D%83%E9%99%90"><span class="toc-number">1.</span> <span class="toc-text">基本权限</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AF%B9%E4%BA%8E%E6%96%87%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text">对于文件:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AF%B9%E4%BA%8E%E7%9B%AE%E5%BD%95"><span class="toc-number">3.</span> <span class="toc-text">对于目录:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E7%94%A8%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">命令用法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E6%96%B9%E5%BC%8F"><span class="toc-number">5.</span> <span class="toc-text">数字方式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9D%83%E9%99%90%E5%8F%8D%E6%8E%A9%E7%A0%81"><span class="toc-number">6.</span> <span class="toc-text">权限反掩码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%92%E5%BD%92%E4%BF%AE%E6%94%B9%E6%9D%83%E9%99%90"><span class="toc-number">7.</span> <span class="toc-text">递归修改权限</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E6%8B%A5%E6%9C%89%E8%80%85%E4%B8%8E%E6%89%80%E5%B1%9E%E7%BB%84"><span class="toc-number">8.</span> <span class="toc-text">修改拥有者与所属组:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E6%9D%83%E9%99%90"><span class="toc-number">9.</span> <span class="toc-text">高级权限:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#sticky%E6%9D%83%E9%99%90"><span class="toc-number">10.</span> <span class="toc-text">sticky权限:</span></a></li></ol>
       </div>
       
         <div class="catelogue catelogue-2">
