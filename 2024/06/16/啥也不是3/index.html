@@ -375,284 +375,164 @@
     <article class="article-content markdown-body">
       <ul>
 <li><h1 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理:"></a>用户管理:</h1><ul>
-<li><p>管理员:   uid&#x3D;0    root</p>
-</li>
-<li><p>系统账号:   uid&#x3D;1-999</p>
-</li>
-<li><p>普通账号:   uid&#x3D;1000-60000</p>
-</li>
-<li><p>管理组:   gid&#x3D;0</p>
-</li>
-<li><p>系统组:   gid&#x3D;1-999</p>
-</li>
-<li><p>普通组:   gid&#x3D;1000-60000</p>
+<li><pre><code>- 管理员:   uid=0    root
+
+- 系统账号:   uid=1-999
+
+- 普通账号:   uid=1000-60000
+
+- 管理组:   gid=0
+
+- 系统组:   gid=1-999
+
+- 普通组:   gid=1000-60000
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">- # 添加账号:</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    - [root@localhost ~]# useradd abc1</span><br><span class="line">    </span><br><span class="line">    - [root@localhost ~]# vim /etc/passwd</span><br><span class="line">    </span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+</code></pre>
 </li>
 </ul>
-</li>
-<li><h1 id="添加账号"><a href="#添加账号" class="headerlink" title="添加账号:"></a>添加账号:</h1><ul>
-<li><p>[root@localhost ~]# useradd abc1</p>
-</li>
-<li><p>[root@localhost ~]# vim &#x2F;etc&#x2F;passwd</p>
-<p>![img](<a target="_blank" rel="noopener" href="https://api2.mubu.com/v3/document_image/099a3ce6-1166-4c1a-8f2f-4c538933467b-18679580.jpg">https://api2.mubu.com/v3/document_image/099a3ce6-1166-4c1a-8f2f-4c538933467b-18679580.jpg</a></p>
-</li>
-<li><p>第一段:  用户名</p>
-</li>
-<li><p>第二段:  密码占位符</p>
-</li>
-<li><p>第三段:  uid </p>
-</li>
-<li><p>第四段:  gid</p>
-</li>
-<li><p>第五段:  描述</p>
-</li>
-<li><p>第六段:  家目录</p>
-</li>
-<li><p>第七段:  shell</p>
-</li>
-<li><h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2></li>
-<li><p>[root@localhost ~]# useradd -u 2000 abc2                  </p>
-</li>
-<li><p>-u  指定uid</p>
-</li>
-<li><p>[root@localhost ~]# useradd -u 2001 -g 2000 abc3     </p>
-</li>
-<li><p>-g  指定gid</p>
-</li>
-<li><p>[root@localhost ~]# useradd -u 2002 -g 2000 -c ‘hello world’ abc4</p>
-</li>
-<li><p>-c 描述</p>
-</li>
-<li><p>[root@localhost ~]# useradd -u 2003 -g 2000 -c ‘hello world’ -d &#x2F;mnt&#x2F;abc5 abc5</p>
-</li>
-<li><p>-d 家目录</p>
-</li>
-<li><p>[root@localhost ~]# useradd -u 2004 -g 2000 -c ‘hello world’ -d &#x2F;mnt&#x2F;abc6 -s &#x2F;bin&#x2F;bash abc6</p>
-</li>
-<li><p>-s  shell</p>
-</li>
-<li><p>[root@localhost ~]# useradd -M -s &#x2F;sbin&#x2F;nologin test</p>
-</li>
-<li><p>-M  不创建家目录</p>
-</li>
-<li><p>&#x2F;sbin&#x2F;nologin  非交互式shell</p>
-</li>
-<li><p>[root@localhost ~]# su - test   切换账号</p>
+<p><img src="C:\Users\23971\AppData\Roaming\Typora\typora-user-images\image-20240616185537339.png" alt="image-20240616185537339"></p>
+<ul>
+<li><pre><code>- 第一段:  用户名
+
+- 第二段:  密码占位符
+
+- 第三段:  uid 
+
+- 第四段:  gid
+
+- 第五段:  描述
+
+- 第六段:  家目录
+
+- 第七段:  shell
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">​		    </span><br><span class="line"></span><br><span class="line">- ## 用法</span><br><span class="line"></span><br><span class="line">- ```</span><br><span class="line">  - [root@localhost ~]# useradd -u 2000 abc2                  </span><br><span class="line">  </span><br><span class="line">  - -u  指定uid</span><br><span class="line">  </span><br><span class="line">  - [root@localhost ~]# useradd -u 2001 -g 2000 abc3     </span><br><span class="line">  </span><br><span class="line">  - -g  指定gid</span><br><span class="line">  </span><br><span class="line">  - [root@localhost ~]# useradd -u 2002 -g 2000 -c &#x27;hello world&#x27; abc4</span><br><span class="line">  </span><br><span class="line">  - -c 描述</span><br><span class="line">  </span><br><span class="line">  - [root@localhost ~]# useradd -u 2003 -g 2000 -c &#x27;hello world&#x27; -d /mnt/abc5 abc5</span><br><span class="line">  </span><br><span class="line">  - -d 家目录</span><br><span class="line">  </span><br><span class="line">  - [root@localhost ~]# useradd -u 2004 -g 2000 -c &#x27;hello world&#x27; -d /mnt/abc6 -s /bin/bash abc6</span><br><span class="line">  </span><br><span class="line">  - -s  shell</span><br><span class="line">  </span><br><span class="line">  - [root@localhost ~]# useradd -M -s /sbin/nologin test</span><br><span class="line">  </span><br><span class="line">  - -M  不创建家目录</span><br><span class="line">  </span><br><span class="line">  - /sbin/nologin  非交互式shell</span><br><span class="line">  </span><br><span class="line">  - [root@localhost ~]# su - test   切换账号</span><br></pre></td></tr></table></figure>
+</code></pre>
 </li>
 </ul>
 </li>
 <li><h1 id="添加组"><a href="#添加组" class="headerlink" title="添加组:"></a>添加组:</h1><ul>
-<li><p>[root@localhost ~]# groupadd redhat</p>
-</li>
-<li><p>[root@localhost ~]# vim &#x2F;etc&#x2F;group</p>
-</li>
-<li><p>![img](<a target="_blank" rel="noopener" href="https://api2.mubu.com/v3/document_image/d5b50819-fbe3-4f04-b099-023b0bc7c28b-18679580.jpg">https://api2.mubu.com/v3/document_image/d5b50819-fbe3-4f04-b099-023b0bc7c28b-18679580.jpg</a></p>
-</li>
-<li><p>第一列:  组名</p>
-</li>
-<li><p>第二列:  组密码占位符</p>
-</li>
-<li><p>第三列:  gid</p>
-</li>
-<li><p>第四列:  用户名</p>
-</li>
-<li><p>参数</p>
-</li>
-<li><p>[root@localhost ~]# groupadd -g 3000 east</p>
-</li>
-<li><p>-g 指定gid</p>
+<li><pre><code>- [root@localhost ~]# groupadd redhat
+
+- [root@localhost ~]# vim /etc/group
+
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line"></span><br><span class="line">![image-20240616185636743](C:\Users\23971\AppData\Roaming\Typora\typora-user-images\image-20240616185636743.png)</span><br><span class="line"></span><br><span class="line">- ```</span><br><span class="line">  - 第一列:  组名</span><br><span class="line">  </span><br><span class="line">  - 第二列:  组密码占位符</span><br><span class="line">  </span><br><span class="line">  - 第三列:  gid</span><br><span class="line">  </span><br><span class="line">  - 第四列:  用户名</span><br><span class="line">  </span><br><span class="line">  - 参数</span><br><span class="line">  </span><br><span class="line">  - [root@localhost ~]# groupadd -g 3000 east</span><br><span class="line">  </span><br><span class="line">  - -g 指定gid</span><br></pre></td></tr></table></figure>
+</code></pre>
 </li>
 </ul>
 </li>
 <li><h1 id="密码设置"><a href="#密码设置" class="headerlink" title="密码设置:"></a>密码设置:</h1><ul>
-<li><p>[root@localhost ~]# passwd robin</p>
-</li>
-<li><p>或</p>
-</li>
-<li><p>[root@localhost ~]# echo 123 | passwd –stdin robin</p>
-</li>
-<li></li>
-</ul>
-</li>
-<li><p>查看 passwod文件</p>
-<ul>
-<li><p>vim &#x2F;etc&#x2F;shadow</p>
-</li>
-<li><p>![img](<a target="_blank" rel="noopener" href="https://api2.mubu.com/v3/document_image/5c1fb4e2-1a2f-4b7e-915a-3a177393c065-18679580.jpg">https://api2.mubu.com/v3/document_image/5c1fb4e2-1a2f-4b7e-915a-3a177393c065-18679580.jpg</a></p>
-</li>
-<li><p>第一列:  用户名</p>
-</li>
-<li><p>第二列:  密码     有密码状态   无密码状态   !!密码锁定状态 !账号锁定 *该用户永久性不能登陆系统</p>
-</li>
-<li><p>第三列:  密码的最后一次修改时间 (unix元年: 1970年1月1日)</p>
-</li>
-<li><p>第四列:  密码最小时间(密码修改间隔)</p>
-</li>
-<li><p>第五列:  密码的最大时间(密码有效期)</p>
-</li>
-<li><p>第六列:  密码过期前警告时间</p>
-</li>
-<li><p>第七列:  密码过期后账号过期时间</p>
-</li>
-<li><p>第八列:  账号有效期</p>
-</li>
-<li><p>第九列:  保留</p>
-</li>
-<li><p>相同uid账号</p>
-</li>
-<li><p>[root@localhost ~]# useradd -o -u 0 admin</p>
+<li><pre><code>- [root@localhost ~]# passwd robin
+
+- 或
+
+- [root@localhost ~]# echo 123 | passwd --stdin robin
+
+- 
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">- ## 查看 passwod文件</span><br><span class="line"></span><br><span class="line">  - vim /etc/shadow</span><br><span class="line"></span><br><span class="line">    ![image-20240616185722092](C:\Users\23971\AppData\Roaming\Typora\typora-user-images\image-20240616185722092.png)</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    -  第一列:  用户名</span><br><span class="line">    </span><br><span class="line">    -  第二列:  密码     有密码状态   无密码状态   !!密码锁定状态 !账号锁定 *该用户永久性不能登陆系统</span><br><span class="line">    </span><br><span class="line">    -  第三列:  密码的最后一次修改时间 (unix元年: 1970年1月1日)</span><br><span class="line">    </span><br><span class="line">    -  第四列:  密码最小时间(密码修改间隔)</span><br><span class="line">    </span><br><span class="line">    -  第五列:  密码的最大时间(密码有效期)</span><br><span class="line">    </span><br><span class="line">    -  第六列:  密码过期前警告时间</span><br><span class="line">    </span><br><span class="line">    -  第七列:  密码过期后账号过期时间</span><br><span class="line">    </span><br><span class="line">    -  第八列:  账号有效期</span><br><span class="line">    </span><br><span class="line">    -  第九列:  保留</span><br><span class="line">    </span><br><span class="line">    -  相同uid账号</span><br><span class="line">    </span><br><span class="line">    -  [root@localhost ~]# useradd -o -u 0 admin</span><br></pre></td></tr></table></figure>
+</code></pre>
 </li>
 </ul>
 </li>
 <li><h1 id="重置root密码"><a href="#重置root密码" class="headerlink" title="重置root密码:"></a>重置root密码:</h1><ul>
-<li><p>![img](<a target="_blank" rel="noopener" href="https://api2.mubu.com/v3/document_image/c91fec25-2cd8-4a5b-b3d1-299e7d52892d-18679580.jpg">https://api2.mubu.com/v3/document_image/c91fec25-2cd8-4a5b-b3d1-299e7d52892d-18679580.jpg</a></p>
-</li>
-<li><p>![img](<a target="_blank" rel="noopener" href="https://api2.mubu.com/v3/document_image/a851e6ce-1669-4f67-a854-6a8b180f36ce-18679580.jpg">https://api2.mubu.com/v3/document_image/a851e6ce-1669-4f67-a854-6a8b180f36ce-18679580.jpg</a></p>
-</li>
-<li><p>3.ctrl+x</p>
-</li>
-<li><p>![img](<a target="_blank" rel="noopener" href="https://api2.mubu.com/v3/document_image/5a5b6f37-ca0c-41e1-9cea-403424d32249-18679580.jpg">https://api2.mubu.com/v3/document_image/5a5b6f37-ca0c-41e1-9cea-403424d32249-18679580.jpg</a></p>
-</li>
-<li><p>![img](<a target="_blank" rel="noopener" href="https://api2.mubu.com/v3/document_image/c3ca5a24-b259-41d3-96fc-d1cbf2f65ecd-18679580.jpg">https://api2.mubu.com/v3/document_image/c3ca5a24-b259-41d3-96fc-d1cbf2f65ecd-18679580.jpg</a></p>
-</li>
-<li><p>![img](<a target="_blank" rel="noopener" href="https://api2.mubu.com/v3/document_image/2de6da79-b476-4fee-8a9c-27af45467e18-18679580.jpg">https://api2.mubu.com/v3/document_image/2de6da79-b476-4fee-8a9c-27af45467e18-18679580.jpg</a></p>
-</li>
-<li><p>7.重启测试新密码</p>
-</li>
-<li><p>exit</p>
-</li>
-<li><p>exit</p>
-</li>
-<li><p>两次</p>
-</li>
+<li><img src="https://api2.mubu.com/v3/document_image/c91fec25-2cd8-4a5b-b3d1-299e7d52892d-18679580.jpg" alt="img"></li>
+<li><img src="https://api2.mubu.com/v3/document_image/a851e6ce-1669-4f67-a854-6a8b180f36ce-18679580.jpg" alt="img"></li>
+<li>ctrl+x</li>
+<li><img src="https://api2.mubu.com/v3/document_image/5a5b6f37-ca0c-41e1-9cea-403424d32249-18679580.jpg" alt="img"></li>
+<li><img src="https://api2.mubu.com/v3/document_image/c3ca5a24-b259-41d3-96fc-d1cbf2f65ecd-18679580.jpg" alt="img"></li>
+<li><img src="https://api2.mubu.com/v3/document_image/2de6da79-b476-4fee-8a9c-27af45467e18-18679580.jpg" alt="img"></li>
+<li>7.重启测试新密码</li>
+<li>exit</li>
+<li>exit</li>
+<li>两次</li>
 </ul>
 </li>
 <li><h1 id="修改用户信息"><a href="#修改用户信息" class="headerlink" title="修改用户信息:"></a>修改用户信息:</h1><ul>
-<li><p>[root@localhost ~]# usermod -u 2500 abc1</p>
-</li>
-<li><p>[root@localhost ~]# usermod -g 3000 abc1</p>
-</li>
-<li><p>[root@localhost ~]# usermod -c “east east” abc1</p>
-</li>
-<li><p>[root@localhost ~]# usermod -s &#x2F;bin&#x2F;tcsh abc1</p>
-</li>
-<li><p>修改家目录:</p>
-</li>
-<li><p>方法1:</p>
-</li>
-<li><p>[root@localhost ~]# usermod -m -d &#x2F;mnt&#x2F;abc1 abc1</p>
-</li>
-<li><p>方法2:</p>
-</li>
-<li><p>[root@localhost ~]# usermod -d &#x2F;home&#x2F;abc1 abc1</p>
-</li>
-<li><p>[root@localhost ~]# mv &#x2F;mnt&#x2F;abc1 &#x2F;home&#x2F;</p>
-</li>
-<li><p>锁定账号</p>
-</li>
-<li><p>[root@localhost ~]# usermod -L robin</p>
-</li>
-<li><p>解锁账号</p>
-</li>
-<li><p>[root@localhost ~]# usermod -U robin</p>
-</li>
-</ul>
-</li>
-<li><h1 id="修改组"><a href="#修改组" class="headerlink" title="修改组:"></a>修改组:</h1><ul>
-<li><p>[root@localhost ~]# groupmod -g 6000 east    修改gid</p>
-</li>
-<li><p>[root@localhost ~]# groupmod -n neweast east   修改组名</p>
+<li><pre><code>- [root@localhost ~]# usermod -u 2500 abc1
+
+- [root@localhost ~]# usermod -g 3000 abc1
+
+- [root@localhost ~]# usermod -c &quot;east east&quot; abc1
+
+- [root@localhost ~]# usermod -s /bin/tcsh abc1
+
+- 修改家目录:
+
+- 方法1:
+
+- [root@localhost ~]# usermod -m -d /mnt/abc1 abc1
+
+- 方法2:
+
+- [root@localhost ~]# usermod -d /home/abc1 abc1
+
+- [root@localhost ~]# mv /mnt/abc1 /home/
+
+- 锁定账号
+
+- [root@localhost ~]# usermod -L robin
+
+- 解锁账号
+
+- [root@localhost ~]# usermod -U robin
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">- # 修改组:</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    - [root@localhost ~]# groupmod -g 6000 east    修改gid</span><br><span class="line">    </span><br><span class="line">    - [root@localhost ~]# groupmod -n neweast east   修改组名</span><br></pre></td></tr></table></figure>
+</code></pre>
 </li>
 </ul>
 </li>
 <li><h1 id="修改密码"><a href="#修改密码" class="headerlink" title="修改密码:"></a>修改密码:</h1><ul>
-<li><p>[root@localhost ~]# passwd -l robin    锁定密码</p>
+<li><pre><code>- [root@localhost ~]# passwd -l robin    锁定密码
+
+- [root@localhost ~]# passwd -u robin   解锁密码
+
+- [root@localhost ~]# passwd -S robin   查看密码状态
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">- # 删除用户</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    [root@localhost ~]# userdel -r abc1</span><br></pre></td></tr></table></figure>
+</code></pre>
 </li>
-<li><p>[root@localhost ~]# passwd -u robin   解锁密码</p>
-</li>
-<li><p>[root@localhost ~]# passwd -S robin   查看密码状态</p>
-</li>
-</ul>
-</li>
-<li><h1 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h1><ul>
-<li>[root@localhost ~]# userdel -r abc1</li>
 </ul>
 </li>
 <li><h1 id="删除组"><a href="#删除组" class="headerlink" title="删除组"></a>删除组</h1><ul>
-<li><p>删除组:  如果组里有其它账号,该组不能删除</p>
-</li>
-<li><p>[root@localhost ~]# groupdel abc1</p>
-</li>
-</ul>
-</li>
-<li><h1 id="手动管理账号"><a href="#手动管理账号" class="headerlink" title="手动管理账号:"></a>手动管理账号:</h1><ul>
-<li><p>1.groupadd -g 10000 west</p>
-</li>
-<li><p>[root@localhost mnt]# vim &#x2F;etc&#x2F;group</p>
-</li>
-<li><p>west: x :10000:</p>
-</li>
-<li></li>
-<li><p>2.useradd -u 10000 -g west  jerry</p>
-</li>
-<li><p>[root@localhost mnt]# vim &#x2F;etc&#x2F;passwd</p>
-</li>
-<li><p>jerry: x :10000:10000::&#x2F;home&#x2F;jerry:&#x2F;bin&#x2F;bash</p>
-</li>
-<li><p>[root@localhost mnt]# mkdir &#x2F;home&#x2F;jerry</p>
-</li>
-<li><p>[root@localhost mnt]# cp &#x2F;etc&#x2F;skel&#x2F;.bash* &#x2F;home&#x2F;jerry&#x2F;</p>
-</li>
-<li></li>
-<li><p>3.passwd jerry</p>
-</li>
-<li><p>[root@localhost mnt]# echo 123 |passwd –stdin jerry</p>
+<li><pre><code>- 删除组:  如果组里有其它账号,该组不能删除
+
+- [root@localhost ~]# groupdel abc1
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">- # 手动管理账号:</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    - 1.groupadd -g 10000 west</span><br><span class="line">    </span><br><span class="line">    - [root@localhost mnt]# vim /etc/group</span><br><span class="line">    </span><br><span class="line">    - west: x :10000:</span><br><span class="line">    </span><br><span class="line">    - </span><br><span class="line">    </span><br><span class="line">    - 2.useradd -u 10000 -g west  jerry</span><br><span class="line">    </span><br><span class="line">    - [root@localhost mnt]# vim /etc/passwd</span><br><span class="line">    </span><br><span class="line">    - jerry: x :10000:10000::/home/jerry:/bin/bash</span><br><span class="line">    </span><br><span class="line">    - [root@localhost mnt]# mkdir /home/jerry</span><br><span class="line">    </span><br><span class="line">    - [root@localhost mnt]# cp /etc/skel/.bash* /home/jerry/</span><br><span class="line">    </span><br><span class="line">    - </span><br><span class="line">    </span><br><span class="line">    - 3.passwd jerry</span><br><span class="line">    </span><br><span class="line">    - [root@localhost mnt]# echo 123 |passwd --stdin jerry</span><br></pre></td></tr></table></figure>
+</code></pre>
 </li>
 </ul>
 </li>
 <li><h1 id="附加组"><a href="#附加组" class="headerlink" title="附加组:"></a>附加组:</h1><ul>
-<li><p>主组一定是附加组   主组是用来定义创建文件时文件的所属组  附加组用来比对权限</p>
-</li>
-<li></li>
-<li><p>[root@localhost ~]# usermod -a -G east je rry   在现有附加组基础上添加新的附加组</p>
-</li>
-<li></li>
-<li><p>[root@localhost ~]# usermod -G new jerry  覆盖现有所有的附加组(除了主组对应附加组)</p>
-</li>
-<li></li>
-<li><p>添加组密码:</p>
-</li>
-<li><p>[root@localhost ~]# gpasswd boss</p>
-</li>
-</ul>
-</li>
-<li><h1 id="用户配置文件"><a href="#用户配置文件" class="headerlink" title="用户配置文件:"></a>用户配置文件:</h1><ul>
-<li><p>&#x2F;etc&#x2F;login.defs      uid范围   gid方位   密码的默认配置</p>
-</li>
-<li><p>&#x2F;etc&#x2F;default&#x2F;useradd  </p>
-</li>
-<li><p>HOME&#x3D;&#x2F;home   默认家目录</p>
-</li>
-<li><p>SHELL&#x3D;&#x2F;bin&#x2F;bash  默认shell  </p>
-</li>
-<li><p>SKEL&#x3D;&#x2F;etc&#x2F;skel  默认环境变量模版地址</p>
+<li><pre><code>- 主组一定是附加组   主组是用来定义创建文件时文件的所属组  附加组用来比对权限
+
+- 
+
+- [root@localhost ~]# usermod -a -G east je rry   在现有附加组基础上添加新的附加组
+
+- 
+
+- [root@localhost ~]# usermod -G new jerry  覆盖现有所有的附加组(除了主组对应附加组)
+
+- 
+
+- 添加组密码:
+
+- [root@localhost ~]# gpasswd boss   
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">- # 用户配置文件:</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    - /etc/login.defs      uid范围   gid方位   密码的默认配置</span><br><span class="line">    </span><br><span class="line">    - /etc/default/useradd  </span><br><span class="line">    </span><br><span class="line">    - HOME=/home   默认家目录</span><br><span class="line">    </span><br><span class="line">    - SHELL=/bin/bash  默认shell  </span><br><span class="line">    </span><br><span class="line">    - SKEL=/etc/skel  默认环境变量模版地址</span><br></pre></td></tr></table></figure>
+</code></pre>
 </li>
 </ul>
 </li>
 <li><h1 id="查看当前用户"><a href="#查看当前用户" class="headerlink" title="查看当前用户"></a>查看当前用户</h1><ul>
-<li>whoami         #当前用户是谁</li>
-</ul>
+<li><pre><code>- - whoami         #当前用户是谁
+- who i am	#原始登录用户是谁
+  - who       用户   终端     登录时间(来源主机)
+- w             当前用户   终端   来源主机         登录时间      cpu消耗       执行命令
+  - last   登录用户的总信息
+- lastlog  所有账号最后一次登录时间记录
+</code></pre>
 </li>
-<li><p>who i am	#原始登录用户是谁</p>
-<ul>
-<li>who       用户   终端     登录时间(来源主机)</li>
 </ul>
-</li>
-<li><p>w             当前用户   终端   来源主机         登录时间      cpu消耗       执行命令</p>
-<ul>
-<li>last   登录用户的总信息</li>
-</ul>
-</li>
-<li><p>lastlog  所有账号最后一次登录时间记录</p>
 </li>
 </ul>
 
@@ -676,7 +556,7 @@
     <div class="article-catelogue--wrapper">
       <div class="catelogue catelogue-1">
         <h3>目录</h3>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86"><span class="toc-number">1.</span> <span class="toc-text">用户管理:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E8%B4%A6%E5%8F%B7"><span class="toc-number">2.</span> <span class="toc-text">添加账号:</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E6%B3%95"><span class="toc-number">2.1.</span> <span class="toc-text">用法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E7%BB%84"><span class="toc-number">3.</span> <span class="toc-text">添加组:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AF%86%E7%A0%81%E8%AE%BE%E7%BD%AE"><span class="toc-number">4.</span> <span class="toc-text">密码设置:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%87%8D%E7%BD%AEroot%E5%AF%86%E7%A0%81"><span class="toc-number">5.</span> <span class="toc-text">重置root密码:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF"><span class="toc-number">6.</span> <span class="toc-text">修改用户信息:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E7%BB%84"><span class="toc-number">7.</span> <span class="toc-text">修改组:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%AF%86%E7%A0%81"><span class="toc-number">8.</span> <span class="toc-text">修改密码:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E7%94%A8%E6%88%B7"><span class="toc-number">9.</span> <span class="toc-text">删除用户</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E7%BB%84"><span class="toc-number">10.</span> <span class="toc-text">删除组</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%89%8B%E5%8A%A8%E7%AE%A1%E7%90%86%E8%B4%A6%E5%8F%B7"><span class="toc-number">11.</span> <span class="toc-text">手动管理账号:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%99%84%E5%8A%A0%E7%BB%84"><span class="toc-number">12.</span> <span class="toc-text">附加组:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">13.</span> <span class="toc-text">用户配置文件:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E7%94%A8%E6%88%B7"><span class="toc-number">14.</span> <span class="toc-text">查看当前用户</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86"><span class="toc-number">1.</span> <span class="toc-text">用户管理:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E7%BB%84"><span class="toc-number">2.</span> <span class="toc-text">添加组:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AF%86%E7%A0%81%E8%AE%BE%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">密码设置:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%87%8D%E7%BD%AEroot%E5%AF%86%E7%A0%81"><span class="toc-number">4.</span> <span class="toc-text">重置root密码:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF"><span class="toc-number">5.</span> <span class="toc-text">修改用户信息:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%AF%86%E7%A0%81"><span class="toc-number">6.</span> <span class="toc-text">修改密码:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E7%BB%84"><span class="toc-number">7.</span> <span class="toc-text">删除组</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%99%84%E5%8A%A0%E7%BB%84"><span class="toc-number">8.</span> <span class="toc-text">附加组:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E7%94%A8%E6%88%B7"><span class="toc-number">9.</span> <span class="toc-text">查看当前用户</span></a></li></ol>
       </div>
       
         <div class="catelogue catelogue-2">

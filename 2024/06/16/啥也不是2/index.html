@@ -375,205 +375,74 @@
     <article class="article-content markdown-body">
       <ul>
 <li><h1 id="vim编辑器"><a href="#vim编辑器" class="headerlink" title="vim编辑器"></a>vim编辑器</h1><ul>
-<li><p>命令模式:   复制,剪切,删除,粘贴,撤销,重做</p>
-</li>
-<li><p>输入模式:   修改文件内容</p>
-</li>
-<li><p>末行模式:   保存 退出 另存 查找 替换 设置</p>
-</li>
-</ul>
-</li>
-<li><h1 id="命令模式进入到输入模式"><a href="#命令模式进入到输入模式" class="headerlink" title="命令模式进入到输入模式:"></a>命令模式进入到输入模式:</h1><ul>
-<li><p>a 当前字符后输入</p>
-</li>
-<li><p>A  当前行尾输入</p>
-</li>
-<li><p>i  当前字符前输入</p>
-</li>
-<li><p>I  当前行首输入</p>
-</li>
-<li><p>o  当前行的下一行输入</p>
-</li>
-<li><p>O  当前行上一行输入</p>
-</li>
-<li><p>s  删除当前字符后输入</p>
-</li>
-<li><p>S 删除当前行后输入</p>
-</li>
-<li><p>HOME键    行首</p>
-</li>
-<li><p>END  行尾</p>
+<li><pre><code>- 命令模式:   复制,剪切,删除,粘贴,撤销,重做
+
+- 输入模式:   修改文件内容
+
+- 末行模式:   保存 退出 另存 查找 替换 设置
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">- # 命令模式进入到输入模式:</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    - a 当前字符后输入</span><br><span class="line">    </span><br><span class="line">    - A  当前行尾输入</span><br><span class="line">    </span><br><span class="line">    - i  当前字符前输入</span><br><span class="line">    </span><br><span class="line">    - I  当前行首输入</span><br><span class="line">    </span><br><span class="line">    - o  当前行的下一行输入</span><br><span class="line">    </span><br><span class="line">    - O  当前行上一行输入</span><br><span class="line">    </span><br><span class="line">    - s  删除当前字符后输入</span><br><span class="line">    </span><br><span class="line">    - S 删除当前行后输入</span><br><span class="line">    </span><br><span class="line">    - HOME键    行首</span><br><span class="line">    </span><br><span class="line">    - END  行尾</span><br></pre></td></tr></table></figure>
+</code></pre>
 </li>
 </ul>
 </li>
 <li><h1 id="命令模式的操作"><a href="#命令模式的操作" class="headerlink" title="命令模式的操作"></a>命令模式的操作</h1><ul>
-<li><p>yy 复制一行   50yy</p>
-</li>
-<li><p>p 粘贴到下一行  P 粘贴上一行 </p>
-</li>
-<li><p>dd  剪切&#x2F;删除  100dd</p>
-</li>
-<li><p>^行首    $行尾</p>
-</li>
-<li><p>y^  复制当前字符到行首(不包含当前字符)</p>
-</li>
-<li><p>d^ 删除当前字符到行首(不包含当前字符)</p>
-</li>
-<li><p>y$ 复制当前字符到行尾(包含当前字符)</p>
-</li>
-<li><p>d$ 删除当前字符到行尾(包含当前字符)</p>
-</li>
-<li><p>gg 首行   G  尾行  500G</p>
-</li>
-<li><p>ygg  复制当前行到首行(包含当前行)</p>
-</li>
-<li><p>dgg  删除&#x2F;剪切当前行到首行(包含当前行)</p>
-</li>
-<li><p>yG  复制当前行到尾行(包含当前行)</p>
-</li>
-<li><p>u撤销一步操作    </p>
-</li>
-<li><p>ctrl+r 重做(恢复)</p>
-</li>
-</ul>
-</li>
-<li><h1 id="末行模式"><a href="#末行模式" class="headerlink" title="末行模式"></a>末行模式</h1><ul>
-<li><p>:w  保存</p>
-</li>
-<li><p>:q   退出</p>
-</li>
-<li><p>:wq  保存退出</p>
-</li>
-<li><p>:q! 强制退出</p>
-</li>
-<li><p>:w! 强制保存</p>
-</li>
-<li><p>:wq!  强制保存退出</p>
-</li>
-<li><p>:x  保存退出</p>
-</li>
-<li><p>:w &#x2F;tmp&#x2F;new.txt  另存</p>
-</li>
-<li><p>:10,20w &#x2F;tmp&#x2F;new.txt   10,20行另存</p>
-</li>
-<li><p>:e &#x2F;tmp&#x2F;new.txt  编辑某个文件</p>
-</li>
-<li><p>:e!  重新打开当前文件</p>
-</li>
-<li><p>:X  加密</p>
-</li>
-<li><p>输入密码:123</p>
-</li>
-<li><p>确认密码: 123</p>
-</li>
-<li><p>:wq</p>
-</li>
-<li><p>取消密码</p>
-</li>
-<li><p>:X</p>
-</li>
-<li><p>输入密码:  回车</p>
-</li>
-<li><p>确认密码: 回车</p>
-</li>
-<li><p>:wq</p>
-</li>
-<li><p>查找:</p>
-</li>
-<li><p>&#x2F;ab  n 下一个  N  上一个</p>
-</li>
-<li><p>?ab N  下一个  n  上一个</p>
-</li>
-<li><p>替换:</p>
-</li>
-<li><p>:g&#x2F;^\s*$&#x2F;d  删除只含有空格和制表符的行</p>
-</li>
-<li><p>:s&#x2F;old&#x2F;new&#x2F;   </p>
-</li>
-<li><p>:%s&#x2F;ab&#x2F;XX&#x2F;gc</p>
-</li>
-<li><p>s  替换 switch</p>
-</li>
-<li><p>% 所有行</p>
-</li>
-<li><p>g  全局  globa</p>
-</li>
-<li><p>c  交互式</p>
-</li>
-<li><p>:3,5s&#x2F;ab&#x2F;XX&#x2F;g</p>
-</li>
-<li><p>:$s&#x2F;ab&#x2F;XX&#x2F;g   最后一行替换</p>
-</li>
-<li><p>:2,$s&#x2F;ab&#x2F;XX&#x2F;g  2到最后一行替换</p>
-</li>
-<li><p>:%s&#x2F; &#x2F;&#x2F;g  删除所有的空格</p>
-</li>
-<li><p>:%s&#x2F;^ *&#x2F;&#x2F;g   删除每行开头的所有空格</p>
-</li>
-<li><p>:%s&#x2F; &#x2F;&#x2F;  删除每行第一个空格</p>
-</li>
-<li><p>:%s&#x2F;^&#x2F;#&#x2F;  注释掉所有行</p>
-</li>
-<li><p>:5d  删除第五行</p>
-</li>
-<li><p>:3,5d  删除3-5行</p>
-</li>
-<li><p>:g&#x2F;xyz&#x2F;d  删除含有xyz的行</p>
-</li>
-<li><p>:g&#x2F;^$&#x2F;d  删除空行</p>
-</li>
-<li><p>:g&#x2F;^\s*$&#x2F;d  删除所有空白行</p>
-</li>
-<li></li>
-<li><p>s&#x2F;o1d&#x2F;new&#x2F;g</p>
-</li>
-<li><p>这个命令的含义是在当前行中替换所有出现的 “o1d” 为 “new” 。同样，“g” 标志表示全局替换。</p>
+<li><pre><code>- yy 复制一行   50yy
+
+- p 粘贴到下一行  P 粘贴上一行 
+
+- dd  剪切/删除  100dd
+
+- ^行首    $行尾
+
+- y^  复制当前字符到行首(不包含当前字符)
+
+- d^ 删除当前字符到行首(不包含当前字符)
+
+- y$ 复制当前字符到行尾(包含当前字符)
+
+- d$ 删除当前字符到行尾(包含当前字符)
+
+- gg 首行   G  尾行  500G
+
+- ygg  复制当前行到首行(包含当前行)
+
+- dgg  删除/剪切当前行到首行(包含当前行)
+
+- yG  复制当前行到尾行(包含当前行)
+
+- u撤销一步操作    
+
+- ctrl+r 重做(恢复)
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">- # 末行模式</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    - - :w  保存</span><br><span class="line">    </span><br><span class="line">      - :q   退出</span><br><span class="line">    </span><br><span class="line">      - :wq  保存退出</span><br><span class="line">    </span><br><span class="line">      - :q! 强制退出</span><br><span class="line">    </span><br><span class="line">      - :w! 强制保存</span><br><span class="line">    </span><br><span class="line">      - :wq!  强制保存退出</span><br><span class="line">    </span><br><span class="line">      - :x  保存退出</span><br><span class="line">    </span><br><span class="line">      - :w /tmp/new.txt  另存</span><br><span class="line">    </span><br><span class="line">      - :10,20w /tmp/new.txt   10,20行另存</span><br><span class="line">    </span><br><span class="line">      - :e /tmp/new.txt  编辑某个文件</span><br><span class="line">    </span><br><span class="line">      - :e!  重新打开当前文件</span><br><span class="line">    </span><br><span class="line">      - :X  加密</span><br><span class="line">    </span><br><span class="line">      - 输入密码:123</span><br><span class="line">    </span><br><span class="line">      - 确认密码: 123</span><br><span class="line">    </span><br><span class="line">      - :wq</span><br><span class="line">    </span><br><span class="line">      - 取消密码</span><br><span class="line">    </span><br><span class="line">      - :X</span><br><span class="line">    </span><br><span class="line">      - 输入密码:  回车</span><br><span class="line">    </span><br><span class="line">      - 确认密码: 回车</span><br><span class="line">    </span><br><span class="line">      - :wq</span><br><span class="line">    </span><br><span class="line">      - 查找:</span><br><span class="line">    </span><br><span class="line">      - /ab  n 下一个  N  上一个</span><br><span class="line">    </span><br><span class="line">      - ?ab N  下一个  n  上一个</span><br><span class="line">    </span><br><span class="line">      - 替换:</span><br><span class="line">    </span><br><span class="line">      - :g/^\s*$/d  删除只含有空格和制表符的行</span><br><span class="line">    </span><br><span class="line">      - :s/old/new/   </span><br><span class="line">    </span><br><span class="line">      - :%s/ab/XX/gc</span><br><span class="line">    </span><br><span class="line">      - s  替换 switch</span><br><span class="line">    </span><br><span class="line">      - % 所有行</span><br><span class="line">    </span><br><span class="line">      - g  全局  globa</span><br><span class="line">    </span><br><span class="line">      - c  交互式</span><br><span class="line">    </span><br><span class="line">      - :3,5s/ab/XX/g</span><br><span class="line">    </span><br><span class="line">      - :$s/ab/XX/g   最后一行替换</span><br><span class="line">    </span><br><span class="line">      - :2,$s/ab/XX/g  2到最后一行替换</span><br><span class="line">    </span><br><span class="line">      - :%s/ //g  删除所有的空格</span><br><span class="line">    </span><br><span class="line">      - :%s/^ *//g   删除每行开头的所有空格</span><br><span class="line">    </span><br><span class="line">      - :%s/ //  删除每行第一个空格</span><br><span class="line">    </span><br><span class="line">      - :%s/^/#/  注释掉所有行</span><br><span class="line">    </span><br><span class="line">      - :5d  删除第五行</span><br><span class="line">    </span><br><span class="line">      - :3,5d  删除3-5行</span><br><span class="line">    </span><br><span class="line">      - :g/xyz/d  删除含有xyz的行</span><br><span class="line">    </span><br><span class="line">      - :g/^$/d  删除空行</span><br><span class="line">    </span><br><span class="line">      - :g/^\s*$/d  删除所有空白行</span><br><span class="line">    </span><br><span class="line">      - </span><br><span class="line">    </span><br><span class="line">      - s/o1d/new/g</span><br><span class="line">    </span><br><span class="line">      - 这个命令的含义是在当前行中替换所有出现的 “o1d” 为 “new” 。同样，“g” 标志表示全局替换。</span><br><span class="line">    </span><br><span class="line">    - ss -antlt |grep  3306 &gt;&gt; mysql.txt  找出想要的进程  追加到文件中</span><br></pre></td></tr></table></figure>
+</code></pre>
 </li>
 </ul>
-</li>
-<li><p>ss -antlt |grep  3306 &gt;&gt; mysql.txt  找出想要的进程  追加到文件中</p>
 </li>
 <li><h1 id="特殊模式"><a href="#特殊模式" class="headerlink" title="特殊模式"></a>特殊模式</h1><ul>
-<li><p>可视化模式      v进入</p>
-</li>
-<li><p>光标选择   y复制  d剪切&#x2F;删除  p粘贴 </p>
-</li>
-<li></li>
-<li><p>可视化块模式       ctrl+v</p>
-</li>
-<li><p>光标选择   y复制  d剪切&#x2F;删除  p粘贴</p>
-</li>
-<li><p>ctrl+v    选中列   shift+i    输入#  ESC键 2次</p>
-</li>
-</ul>
-</li>
-<li><h1 id="多文件操作"><a href="#多文件操作" class="headerlink" title="多文件操作"></a>多文件操作</h1><ul>
-<li><p>vim aa.txt cc.txt tt.txt</p>
-</li>
-<li><p>:next 下一个</p>
-</li>
-<li><p>:prev  上一个</p>
-</li>
-<li><p>:last  最后一个文件</p>
-</li>
-<li><p>:first  第一个文件</p>
-</li>
-<li><p>:file  查看总数以及当前第几个</p>
-</li>
-<li><p>:files 所有文件信息</p>
+<li><pre><code>- 可视化模式      v进入
+
+- 光标选择   y复制  d剪切/删除  p粘贴 
+
+- 
+
+- 可视化块模式       ctrl+v
+
+- 光标选择   y复制  d剪切/删除  p粘贴
+
+- ctrl+v    选中列   shift+i    输入#  ESC键 2次
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">- # 多文件操作</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    -  vim aa.txt cc.txt tt.txt</span><br><span class="line">    </span><br><span class="line">    -  :next 下一个</span><br><span class="line">    </span><br><span class="line">    -  :prev  上一个</span><br><span class="line">    </span><br><span class="line">    -  :last  最后一个文件</span><br><span class="line">    </span><br><span class="line">    -  :first  第一个文件</span><br><span class="line">    </span><br><span class="line">    -  :file  查看总数以及当前第几个</span><br><span class="line">    </span><br><span class="line">    -  :files 所有文件信息</span><br></pre></td></tr></table></figure>
+</code></pre>
 </li>
 </ul>
 </li>
 <li><h1 id="同屏打开多个文件"><a href="#同屏打开多个文件" class="headerlink" title="同屏打开多个文件"></a>同屏打开多个文件</h1><ul>
-<li>vimdiff aa.txt cc.txt tt.txt</li>
-<li>ctrl+w+w 切换文件</li>
-<li>横向  显示<ul>
-<li>vim -O aa.txt cc.txt tt.txt</li>
-</ul>
-</li>
-<li>竖向  显示<ul>
-<li>vim -o aa.txt cc.txt tt.txt</li>
-</ul>
+<li><pre><code>-  vimdiff aa.txt cc.txt tt.txt
+-  ctrl+w+w 切换文件
+-  横向  显示
+   - vim -O aa.txt cc.txt tt.txt 
+-  竖向  显示
+   - vim -o aa.txt cc.txt tt.txt
+</code></pre>
 </li>
 </ul>
 </li>
@@ -599,7 +468,7 @@
     <div class="article-catelogue--wrapper">
       <div class="catelogue catelogue-1">
         <h3>目录</h3>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#vim%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-number">1.</span> <span class="toc-text">vim编辑器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%E8%BF%9B%E5%85%A5%E5%88%B0%E8%BE%93%E5%85%A5%E6%A8%A1%E5%BC%8F"><span class="toc-number">2.</span> <span class="toc-text">命令模式进入到输入模式:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-number">3.</span> <span class="toc-text">命令模式的操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AB%E8%A1%8C%E6%A8%A1%E5%BC%8F"><span class="toc-number">4.</span> <span class="toc-text">末行模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E6%A8%A1%E5%BC%8F"><span class="toc-number">5.</span> <span class="toc-text">特殊模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%9A%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="toc-number">6.</span> <span class="toc-text">多文件操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8C%E5%B1%8F%E6%89%93%E5%BC%80%E5%A4%9A%E4%B8%AA%E6%96%87%E4%BB%B6"><span class="toc-number">7.</span> <span class="toc-text">同屏打开多个文件</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#vim%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-number">1.</span> <span class="toc-text">vim编辑器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-number">2.</span> <span class="toc-text">命令模式的操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E6%A8%A1%E5%BC%8F"><span class="toc-number">3.</span> <span class="toc-text">特殊模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8C%E5%B1%8F%E6%89%93%E5%BC%80%E5%A4%9A%E4%B8%AA%E6%96%87%E4%BB%B6"><span class="toc-number">4.</span> <span class="toc-text">同屏打开多个文件</span></a></li></ol>
       </div>
       
         <div class="catelogue catelogue-2">

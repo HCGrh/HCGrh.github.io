@@ -375,435 +375,239 @@
     <article class="article-content markdown-body">
       <ul>
 <li><h1 id="虚拟终端（pts）快捷键"><a href="#虚拟终端（pts）快捷键" class="headerlink" title="虚拟终端（pts）快捷键"></a>虚拟终端（pts）快捷键</h1><ul>
-<li><p>shift+ctrl+ +  扩大</p>
-</li>
-<li><p>ctrl + - 缩小</p>
-</li>
-<li><p>shift+ctrl + t  新标签</p>
-</li>
-<li><p>alt+ 1    2    3    切换标签</p>
-</li>
-<li><p>shift+ctrl+w  关闭标签</p>
-</li>
-<li><p>alt+ F4  关闭终端</p>
-</li>
-</ul>
-</li>
-<li><h1 id="tty切换"><a href="#tty切换" class="headerlink" title="tty切换"></a>tty切换</h1><ul>
-<li><p>ctrl + alt F2 - F6   或者 ctrl + alt + Fn  F2 - F6</p>
-</li>
-<li><p>切换到桌面    alt + F1  或者  Fn + alt + F1</p>
+<li><pre><code>- shift+ctrl+ +  扩大
+
+- ctrl + - 缩小
+
+- shift+ctrl + t  新标签
+
+- alt+ 1    2    3    切换标签
+
+- shift+ctrl+w  关闭标签
+
+- alt+ F4  关闭终端
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">- # tty切换</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    - ctrl + alt F2 - F6   或者 ctrl + alt + Fn  F2 - F6</span><br><span class="line">    </span><br><span class="line">    - 切换到桌面    alt + F1  或者  Fn + alt + F1</span><br></pre></td></tr></table></figure>
+</code></pre>
 </li>
 </ul>
 </li>
 <li><h1 id="xshell-工具"><a href="#xshell-工具" class="headerlink" title="xshell 工具"></a>xshell 工具</h1><ul>
 <li><h2 id="配置网卡文件"><a href="#配置网卡文件" class="headerlink" title="配置网卡文件"></a>配置网卡文件</h2><ul>
-<li>vim  &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-ens33</li>
-</ul>
+<li><pre><code>vim  /etc/sysconfig/network-scripts/ifcfg-ens33
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">    </span><br><span class="line">  </span><br><span class="line">- ## 重启网卡</span><br><span class="line">  </span><br><span class="line">  - ```</span><br><span class="line">    systemctl  restart  network</span><br></pre></td></tr></table></figure>
+</code></pre>
 </li>
-<li><h2 id="重启网卡"><a href="#重启网卡" class="headerlink" title="重启网卡"></a>重启网卡</h2><ul>
-<li>systemctl  restart  network</li>
 </ul>
 </li>
 <li><h2 id="查询网卡信息"><a href="#查询网卡信息" class="headerlink" title="查询网卡信息"></a>查询网卡信息</h2><ul>
-<li><p>ip  addr   show   ens33</p>
-</li>
-<li><p>ip a</p>
-</li>
-<li><p>ifconfig</p>
+<li><pre><code>- ip  addr   show   ens33
+
+- ip a
+
+- ifconfig
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">    </span><br><span class="line">      </span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">- # 命令的组成</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    - [root@localhost ~]# 命令  -[参数.....]  [file.....]</span><br><span class="line">    </span><br><span class="line">    - root    当前用户</span><br><span class="line">    </span><br><span class="line">    - [localhost](http://localhost/)  主机名</span><br><span class="line">    </span><br><span class="line">    - ~  表示当前位置</span><br><span class="line">    </span><br><span class="line">    - \#表示root用户  $ 表示 普通用户</span><br></pre></td></tr></table></figure>
+</code></pre>
 </li>
 </ul>
-</li>
-</ul>
-</li>
-<li><h1 id="命令的组成"><a href="#命令的组成" class="headerlink" title="命令的组成"></a>命令的组成</h1><ul>
-<li><p>[root@localhost ~]# 命令  -[参数…..]  [file…..]</p>
-</li>
-<li><p>root    当前用户</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://localhost/">localhost</a>  主机名</p>
-</li>
-<li><p>~  表示当前位置</p>
-</li>
-<li><p>#表示root用户  $ 表示 普通用户</p>
 </li>
 </ul>
 </li>
 <li><h1 id="文件类型说明"><a href="#文件类型说明" class="headerlink" title="文件类型说明"></a>文件类型说明</h1><ul>
-<li><p>- # rw——-# . #1 #root #root #1647 #7月  17 18:52# anaconda-ks.cfg</p>
-</li>
-<li><p>第一列：文件类型</p>
-</li>
-<li><p>第二列：基本权限</p>
-</li>
-<li><p>第三列：是否在开启selinux环境下创建</p>
-</li>
-<li><p>第四列：硬链接数</p>
-</li>
-<li><p>第五列：文件拥有者</p>
-</li>
-<li><p>第六列：文件所属组</p>
-</li>
-<li><p>第七列：文件大小</p>
-</li>
-<li><p>第八列：最后一次修改时间</p>
-</li>
-<li><p>第九列：文件名</p>
-</li>
-</ul>
-</li>
-<li><h1 id="文件类型"><a href="#文件类型" class="headerlink" title="文件类型"></a>文件类型</h1><ul>
-<li><p>-  普通文件  regular</p>
-</li>
-<li><p>d 目录文件  directory</p>
-</li>
-<li><p>l  符号链接   symbolic  又称 软连接</p>
-</li>
-<li><p>s  套接字文件  socket   unxi套接字和tcp套接字</p>
-</li>
-<li><p>p  管道文件   pipe</p>
-</li>
-<li><p>c  字符设备文件   character</p>
-</li>
-<li><p>b  块设备文件   block  (硬盘   U盘   光盘)</p>
+<li><pre><code>- \- # rw-------# . #1 #root #root #1647 #7月  17 18:52# anaconda-ks.cfg
+
+- 第一列：文件类型
+
+- 第二列：基本权限
+
+- 第三列：是否在开启selinux环境下创建
+
+- 第四列：硬链接数
+
+- 第五列：文件拥有者
+
+- 第六列：文件所属组
+
+- 第七列：文件大小
+
+- 第八列：最后一次修改时间
+
+- 第九列：文件名
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">- # 文件类型</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    - -  普通文件  regular</span><br><span class="line">    </span><br><span class="line">    - d 目录文件  directory</span><br><span class="line">    </span><br><span class="line">    - l  符号链接   symbolic  又称 软连接</span><br><span class="line">    </span><br><span class="line">    - s  套接字文件  socket   unxi套接字和tcp套接字</span><br><span class="line">    </span><br><span class="line">    - p  管道文件   pipe</span><br><span class="line">    </span><br><span class="line">    - c  字符设备文件   character</span><br><span class="line">    </span><br><span class="line">    - b  块设备文件   block  (硬盘   U盘   光盘)</span><br></pre></td></tr></table></figure>
+</code></pre>
 </li>
 </ul>
 </li>
 <li><h1 id="ls-的参数"><a href="#ls-的参数" class="headerlink" title="ls  的参数"></a>ls  的参数</h1><ul>
-<li><p>-l   log    长格式信息</p>
-</li>
-<li><p>-a  显示所有文件</p>
-</li>
-<li><p>-h  按最大单位显示</p>
-</li>
-<li><p>-S  按大小排序(默认降序)</p>
-</li>
-<li><p>-r  逆序 reverse</p>
-</li>
-<li><p>-t  时间</p>
-</li>
-<li><p>-R  递归   recursive</p>
-</li>
-<li><p>-d  查看目录信息</p>
-</li>
-<li><p>-i  显示文件的inode号</p>
-</li>
-<li><p>-A  显示所有文件   不包括 隐藏文件</p>
-</li>
-</ul>
-</li>
-<li><h1 id="cd的使用说明"><a href="#cd的使用说明" class="headerlink" title="cd的使用说明"></a>cd的使用说明</h1><ul>
-<li><p>cd    切换路径   切换目录</p>
-<ul>
-<li><p>绝对路径：从&#x2F; 开始  的路径 是绝对路径</p>
-</li>
-<li><p>相对路径：从当前目录开始  是相对路径</p>
-</li>
-</ul>
-</li>
-<li><p>cd ..   返回上一层目录</p>
-</li>
-<li><p>cd .  刷新</p>
-</li>
-<li><p>cd  ..&#x2F;..   返回上层的上层</p>
-</li>
-<li><p>cd ~  返回家目录     cd   回车 也可以</p>
-</li>
-<li><p>cd  -   返回上次工作目录</p>
-</li>
-<li><p>pwd  显示当前目录</p>
+<li><pre><code>- -l   log    长格式信息
+
+- -a  显示所有文件
+
+- -h  按最大单位显示
+
+- -S  按大小排序(默认降序)
+
+- -r  逆序 reverse
+
+- -t  时间
+
+- -R  递归   recursive
+
+- -d  查看目录信息
+
+- -i  显示文件的inode号
+
+- -A  显示所有文件   不包括 隐藏文件
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">- # cd的使用说明</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    - cd    切换路径   切换目录</span><br><span class="line">    </span><br><span class="line">      - 绝对路径：从/ 开始  的路径 是绝对路径</span><br><span class="line">    </span><br><span class="line">      - 相对路径：从当前目录开始  是相对路径</span><br><span class="line">    </span><br><span class="line">    - cd ..   返回上一层目录</span><br><span class="line">    </span><br><span class="line">    - cd .  刷新</span><br><span class="line">    </span><br><span class="line">    - cd  ../..   返回上层的上层</span><br><span class="line">    </span><br><span class="line">    - cd ~  返回家目录     cd   回车 也可以</span><br><span class="line">    </span><br><span class="line">    - cd  -   返回上次工作目录</span><br><span class="line">    </span><br><span class="line">    - pwd  显示当前目录</span><br></pre></td></tr></table></figure>
+</code></pre>
 </li>
 </ul>
 </li>
 <li><h1 id="获取帮助的方法‘"><a href="#获取帮助的方法‘" class="headerlink" title="获取帮助的方法‘"></a>获取帮助的方法‘</h1><ul>
-<li><p>ls  –help     获取 ls   的  参数</p>
-</li>
-<li><p>info    ls</p>
-</li>
-<li><p>type  ls</p>
-</li>
-</ul>
-</li>
-<li><h1 id="命令分类"><a href="#命令分类" class="headerlink" title="命令分类:"></a>命令分类:</h1><ul>
-<li><p>内部命令：cd是 shell的内嵌</p>
-</li>
-<li><p>外部命令：cat是 &#x2F;usr&#x2F;bin&#x2F;cat</p>
-</li>
-<li><p>别名：ls  是  ’ls –color&#x3D;auto‘ 的别名</p>
-<ul>
-<li><p>别名&gt;外部&gt;内部 </p>
-</li>
-<li><p>别名 &gt; 外部</p>
-</li>
-<li><p>别名&gt; 内部</p>
-</li>
-</ul>
+<li><pre><code>- ls  --help     获取 ls   的  参数
+
+- info    ls
+
+- type  ls
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">- # 命令分类:</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    - 内部命令：cd是 shell的内嵌</span><br><span class="line">    </span><br><span class="line">    - 外部命令：cat是 /usr/bin/cat</span><br><span class="line">    </span><br><span class="line">    - 别名：ls  是  ’ls --color=auto‘ 的别名</span><br><span class="line">    </span><br><span class="line">      - 别名&gt;外部&gt;内部 </span><br><span class="line">    </span><br><span class="line">      - 别名 &gt; 外部</span><br><span class="line">    </span><br><span class="line">      - 别名&gt; 内部</span><br></pre></td></tr></table></figure>
+</code></pre>
 </li>
 </ul>
 </li>
 <li><h1 id="查询和定义别名"><a href="#查询和定义别名" class="headerlink" title="查询和定义别名"></a>查询和定义别名</h1><ul>
-<li><p>alias   查询系统中所有的别名</p>
+<li><pre><code>- alias   查询系统中所有的别名
+
+- alias  la = ’ls  -lah‘   临时定义别名
+
+- unallas  la  释放别名
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">- # 帮助文档位置</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    /usr/share/doc/ 的目录下</span><br></pre></td></tr></table></figure>
+</code></pre>
 </li>
-<li><p>alias  la &#x3D; ’ls  -lah‘   临时定义别名</p>
-</li>
-<li><p>unallas  la  释放别名</p>
-</li>
-</ul>
-</li>
-<li><h1 id="帮助文档位置"><a href="#帮助文档位置" class="headerlink" title="帮助文档位置"></a>帮助文档位置</h1><ul>
-<li>&#x2F;usr&#x2F;share&#x2F;doc&#x2F; 的目录下</li>
 </ul>
 </li>
 <li><h1 id="man手册"><a href="#man手册" class="headerlink" title="man手册"></a>man手册</h1><ul>
-<li><p>man  1  用户命令</p>
-</li>
-<li><p>man  2  系统调用</p>
-</li>
-<li><p>man  3  库调用</p>
-</li>
-<li><p>man  4  特殊文件</p>
-</li>
-<li><p>man  5  配置文件</p>
-</li>
-<li><p>man  6  游戏</p>
-</li>
-<li><p>man  7  杂项   man  7  man</p>
-</li>
-<li><p>man  8  系统命令</p>
-</li>
-<li><p>man  -f  passwd   查看解释</p>
-</li>
-<li><p>man  -k  passwd    模糊查询</p>
-</li>
-</ul>
-</li>
-<li><h1 id="下-的目录功能和作用"><a href="#下-的目录功能和作用" class="headerlink" title="&#x2F; 下 的目录功能和作用"></a>&#x2F; 下 的目录功能和作用</h1><ul>
-<li><p>&#x2F;bin   用户可执行目录</p>
-</li>
-<li><p>&#x2F;sbin   系统可执行目录</p>
-</li>
-<li><p>&#x2F;lib    32为库文件目录</p>
-</li>
-<li><p>&#x2F;lib64    64位库文件目录</p>
-</li>
-<li><p>&#x2F;proc    伪文件系统，内存中的信息和内核参数，硬件信息</p>
-</li>
-<li><p>&#x2F;sys       伪文件系统，内存中的信息和内核参数，硬件信息</p>
-</li>
-<li><p>&#x2F;usr       应用程序目录</p>
-</li>
-<li><p>&#x2F;etc      配置文件目录</p>
-</li>
-<li><p>&#x2F;var     日志和数据文件目录</p>
-</li>
-<li><p>&#x2F;boot    启动程序目录以及启动时所需要的文件</p>
-</li>
-<li><p>&#x2F;root     root 的家目录</p>
-</li>
-<li><p>&#x2F;home   普通用户的家目录</p>
-</li>
-<li><p>&#x2F;dev        块设备和字符设备文件目录</p>
-</li>
-<li><p>&#x2F;run       进程号与锁文件目录</p>
-</li>
-<li><p>tmp        临时文件目录</p>
-</li>
-<li><p>&#x2F;mnt      其他挂载点</p>
-</li>
-<li><p>&#x2F;opt      第三方软件目录</p>
-</li>
-<li><p>&#x2F;media     媒介目录</p>
-</li>
-<li><p>&#x2F;srv       服务器数据目录</p>
+<li><pre><code>- man  1  用户命令
+
+- man  2  系统调用
+
+- man  3  库调用
+
+- man  4  特殊文件
+
+- man  5  配置文件
+
+- man  6  游戏
+
+- man  7  杂项   man  7  man
+
+- man  8  系统命令
+
+- man  -f  passwd   查看解释
+
+- man  -k  passwd    模糊查询
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">- # / 下 的目录功能和作用</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    - /bin   用户可执行目录</span><br><span class="line">    </span><br><span class="line">    - /sbin   系统可执行目录</span><br><span class="line">    </span><br><span class="line">    - /lib    32为库文件目录</span><br><span class="line">    </span><br><span class="line">    - /lib64    64位库文件目录</span><br><span class="line">    </span><br><span class="line">    - /proc    伪文件系统，内存中的信息和内核参数，硬件信息</span><br><span class="line">    </span><br><span class="line">    - /sys       伪文件系统，内存中的信息和内核参数，硬件信息</span><br><span class="line">    </span><br><span class="line">    - /usr       应用程序目录</span><br><span class="line">    </span><br><span class="line">    - /etc      配置文件目录</span><br><span class="line">    </span><br><span class="line">    - /var     日志和数据文件目录</span><br><span class="line">    </span><br><span class="line">    - /boot    启动程序目录以及启动时所需要的文件</span><br><span class="line">    </span><br><span class="line">    - /root     root 的家目录</span><br><span class="line">    </span><br><span class="line">    - /home   普通用户的家目录</span><br><span class="line">    </span><br><span class="line">    - /dev        块设备和字符设备文件目录</span><br><span class="line">    </span><br><span class="line">    - /run       进程号与锁文件目录</span><br><span class="line">    </span><br><span class="line">    - tmp        临时文件目录</span><br><span class="line">    </span><br><span class="line">    - /mnt      其他挂载点</span><br><span class="line">    </span><br><span class="line">    - /opt      第三方软件目录</span><br><span class="line">    </span><br><span class="line">    - /media     媒介目录</span><br><span class="line">    </span><br><span class="line">    - /srv       服务器数据目录</span><br></pre></td></tr></table></figure>
+</code></pre>
 </li>
 </ul>
 </li>
 <li><h1 id="查看文件的命令"><a href="#查看文件的命令" class="headerlink" title="查看文件的命令"></a>查看文件的命令</h1><ul>
 <li><h2 id="less-命令"><a href="#less-命令" class="headerlink" title="less 命令"></a>less 命令</h2><ul>
-<li>less &#x2F;root&#x2F;anaconda-ks.cfg</li>
-</ul>
-</li>
-<li><h2 id="more命令"><a href="#more命令" class="headerlink" title="more命令"></a>more命令</h2><ul>
-<li><p>more &#x2F;root&#x2F;anaconda-ks.cfg</p>
-</li>
-<li><p>回车   下一行</p>
-</li>
-<li><p>空格    下一页</p>
-</li>
-<li><p>b           上一页</p>
-</li>
-<li><p>q           退出</p>
+<li><pre><code>less /root/anaconda-ks.cfg
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">    </span><br><span class="line">  </span><br><span class="line">- ## more命令</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    - more /root/anaconda-ks.cfg</span><br><span class="line">    </span><br><span class="line">    - 回车   下一行</span><br><span class="line">    </span><br><span class="line">    - 空格    下一页</span><br><span class="line">    </span><br><span class="line">    - b           上一页</span><br><span class="line">    </span><br><span class="line">    - q           退出</span><br></pre></td></tr></table></figure>
+</code></pre>
 </li>
 </ul>
 </li>
 <li><h2 id="head命令-默认前十行"><a href="#head命令-默认前十行" class="headerlink" title="head命令    默认前十行"></a>head命令    默认前十行</h2><ul>
-<li><p>head &#x2F;root&#x2F;anaconda-ks.cfg</p>
-</li>
-<li><p>查看 前二十行</p>
-<ul>
-<li><p>head  -n 20 &#x2F;root&#x2F;anaconda-ks.cfg</p>
-</li>
-<li><p>head  -20 &#x2F;root&#x2F;anaconda-ks.cfg</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><h2 id="tail命令-默认后十行"><a href="#tail命令-默认后十行" class="headerlink" title="tail命令      默认后十行"></a>tail命令      默认后十行</h2><ul>
-<li><p>tail &#x2F;root&#x2F;anaconda-ks.cfg</p>
-</li>
-<li><p>查看   后二十行</p>
-<ul>
-<li><p>tail -n 20 &#x2F;root&#x2F;anaconda-ks.cfg</p>
-</li>
-<li><p>tail -20 &#x2F;root&#x2F;anaconda-ks.cfg</p>
-</li>
-<li><p>使用 tail  查看 监控日志</p>
-</li>
-<li><p>tail -f &#x2F;var&#x2F;log&#x2F;messages</p>
-</li>
-</ul>
+<li><pre><code>- head /root/anaconda-ks.cfg
+
+- 查看 前二十行
+
+  -  head  -n 20 /root/anaconda-ks.cfg
+
+  -  head  -20 /root/anaconda-ks.cfg
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">- ## tail命令      默认后十行</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    - tail /root/anaconda-ks.cfg</span><br><span class="line">    </span><br><span class="line">    - 查看   后二十行</span><br><span class="line">    </span><br><span class="line">      - tail -n 20 /root/anaconda-ks.cfg</span><br><span class="line">    </span><br><span class="line">      - tail -20 /root/anaconda-ks.cfg</span><br><span class="line">    </span><br><span class="line">      - 使用 tail  查看 监控日志</span><br><span class="line">    </span><br><span class="line">      - tail -f /var/log/messages</span><br></pre></td></tr></table></figure>
+</code></pre>
 </li>
 </ul>
 </li>
 <li><h2 id="cat-命令"><a href="#cat-命令" class="headerlink" title="cat  命令"></a>cat  命令</h2><ul>
 <li><h3 id="查看行号"><a href="#查看行号" class="headerlink" title="查看行号"></a>查看行号</h3><ul>
-<li><p>cat -n  &#x2F;root&#x2F;anaconda-ks.cfg    -n  显示所有行号</p>
-</li>
-<li><p>cat -b  &#x2F;root&#x2F;anaconda-ks.cfg   -b   显示有效行号</p>
-</li>
-<li><p>管道符    |       将前一个命令的输出 作为 后一个命令的输入</p>
-</li>
-<li><p>cat -n &#x2F;root&#x2F;anaconda-ks.cfg | les</p>
+<li><pre><code>- cat -n  /root/anaconda-ks.cfg    -n  显示所有行号
+
+- cat -b  /root/anaconda-ks.cfg   -b   显示有效行号
+
+- 管道符    |       将前一个命令的输出 作为 后一个命令的输入
+
+- cat -n /root/anaconda-ks.cfg | les
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">    </span><br><span class="line">      </span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">- # 文件管理</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    - touch  命令</span><br><span class="line">    </span><br><span class="line">    - 创建一个  文件</span><br><span class="line">    </span><br><span class="line">    - touch  a.txt</span><br><span class="line">    </span><br><span class="line">    - 创建多个文件</span><br><span class="line">    </span><br><span class="line">    - touch  a.txt  b.txt</span><br><span class="line">    </span><br><span class="line">    - touch  &#123;a,b,c&#125;&#123;1,2,3&#125;.txt</span><br></pre></td></tr></table></figure>
+</code></pre>
 </li>
 </ul>
-</li>
-</ul>
-</li>
-<li><h1 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h1><ul>
-<li><p>touch  命令</p>
-</li>
-<li><p>创建一个  文件</p>
-</li>
-<li><p>touch  a.txt</p>
-</li>
-<li><p>创建多个文件</p>
-</li>
-<li><p>touch  a.txt  b.txt</p>
-</li>
-<li><p>touch  {a,b,c}{1,2,3}.txt</p>
 </li>
 </ul>
 </li>
 <li><h1 id="同步时间"><a href="#同步时间" class="headerlink" title="同步时间"></a>同步时间</h1><ul>
-<li><p>ntpdate  <a target="_blank" rel="noopener" href="http://ntp.aliyun.com/">ntp.aliyun.com</a></p>
-</li>
-<li><p>修改时间   touch -d  “2023-07-17  16:37:00”  abc.txt</p>
-</li>
-</ul>
-</li>
-<li><h1 id="mkdir-创建"><a href="#mkdir-创建" class="headerlink" title="mkdir 创建"></a>mkdir 创建</h1><ul>
-<li><p>mkdir   abc</p>
-</li>
-<li><p>mkdir  abc    bac</p>
-</li>
-<li><p>mkdir  &#x2F;usr&#x2F;abc&#x2F;abc&#x2F;abc   -pv</p>
-</li>
-<li><p>-p   递归创建</p>
-</li>
-<li><p>-v  显示过程</p>
+<li><pre><code>- ntpdate  [ntp.aliyun.com](http://ntp.aliyun.com/)
+
+- 修改时间   touch -d  &quot;2023-07-17  16:37:00&quot;  abc.txt
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">- # mkdir 创建</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    - mkdir   abc</span><br><span class="line">    </span><br><span class="line">    - mkdir  abc    bac</span><br><span class="line">    </span><br><span class="line">    - mkdir  /usr/abc/abc/abc   -pv</span><br><span class="line">    </span><br><span class="line">    - -p   递归创建</span><br><span class="line">    </span><br><span class="line">    - -v  显示过程</span><br></pre></td></tr></table></figure>
+</code></pre>
 </li>
 </ul>
 </li>
 <li><h1 id="剪切-拷贝"><a href="#剪切-拷贝" class="headerlink" title="剪切&#x2F;拷贝"></a>剪切&#x2F;拷贝</h1><ul>
-<li><p>cp    源文件地址  目标地址</p>
-</li>
-<li><p>cp &#x2F;root&#x2F;abc.txt &#x2F;tmp&#x2F;</p>
-</li>
-<li><p>拷贝过程中可以重命名</p>
-</li>
-<li><p>cp &#x2F;root&#x2F;abcd.txt &#x2F;tmp&#x2F;xxxx.txt</p>
-</li>
-<li><p>-r    递归拷贝</p>
-</li>
-<li><p>cp -r  &#x2F;root&#x2F;abc&#x2F; &#x2F;tmp&#x2F;    </p>
-</li>
-<li><p>cp -r  &#x2F;root&#x2F;abc&#x2F; &#x2F;tmp&#x2F;yyyy</p>
-</li>
-<li></li>
-<li><p>mv    源文件地址   目标地址</p>
-</li>
-<li><p>mv &#x2F;root&#x2F;abce.txt &#x2F;tmp&#x2F;</p>
-</li>
-<li><p>重命名</p>
-</li>
-<li><p>mv &#x2F;root&#x2F;abc.txt &#x2F;root&#x2F;xyz.txt</p>
-</li>
-<li><p>移动目录</p>
-</li>
-<li><p>mv &#x2F;root&#x2F;abcd &#x2F;tmp&#x2F;</p>
-</li>
-</ul>
-</li>
-<li><h1 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h1><ul>
-<li><p>rmdir    只能删除空目录</p>
-</li>
-<li><p>rmdir &#x2F;root&#x2F;a1</p>
-</li>
-<li><p>-f    强制删除</p>
-</li>
-<li><p>rm -f &#x2F;root&#x2F;abc2.tx</p>
-</li>
-<li><p>-r   递归删除</p>
-</li>
-<li><p>rm -rf &#x2F;root&#x2F;abc1 </p>
-</li>
-<li><p>* 匹配所有字符</p>
-</li>
-<li><p>rm -rf &#x2F;root&#x2F;*.txt</p>
+<li><pre><code>- cp    源文件地址  目标地址
+
+- cp /root/abc.txt /tmp/
+
+- 拷贝过程中可以重命名
+
+- cp /root/abcd.txt /tmp/xxxx.txt
+
+- -r    递归拷贝
+
+- cp -r  /root/abc/ /tmp/    
+
+- cp -r  /root/abc/ /tmp/yyyy
+
+- 
+
+- mv    源文件地址   目标地址
+
+- mv /root/abce.txt /tmp/
+
+- 重命名
+
+- mv /root/abc.txt /root/xyz.txt
+
+- 移动目录
+
+- mv /root/abcd /tmp/
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">- # 删除</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    - rmdir    只能删除空目录</span><br><span class="line">    </span><br><span class="line">    - rmdir /root/a1</span><br><span class="line">    </span><br><span class="line">    - -f    强制删除</span><br><span class="line">    </span><br><span class="line">    - rm -f /root/abc2.tx</span><br><span class="line">    </span><br><span class="line">    - -r   递归删除</span><br><span class="line">    </span><br><span class="line">    - rm -rf /root/abc1 </span><br><span class="line">    </span><br><span class="line">    - \* 匹配所有字符</span><br><span class="line">    </span><br><span class="line">    - rm -rf /root/*.txt</span><br></pre></td></tr></table></figure>
+</code></pre>
 </li>
 </ul>
 </li>
 <li><h1 id="命令引用"><a href="#命令引用" class="headerlink" title="命令引用"></a>命令引用</h1><ul>
-<li><p>调用命令的结果作为文件名称使用</p>
-</li>
-<li><p>$(命令)</p>
-</li>
-</ul>
-</li>
-<li><h1 id="查看时间"><a href="#查看时间" class="headerlink" title="查看时间"></a>查看时间</h1><ul>
-<li><p>[root@localhost ~]# date         |   2022年 07月 06日 星期三 11:34:49 </p>
-</li>
-<li><p>[root@localhost ~]# date +%Y   |   2022</p>
-</li>
-<li><p>[root@localhost ~]# date +%m   |     07</p>
-</li>
-<li><p>[root@localhost ~]# date +%d     |   06</p>
-</li>
-<li><p>[root@localhost ~]# date +%H      |   11</p>
-</li>
-<li><p>[root@localhost ~]# date +%M     |     36</p>
-</li>
-<li><p>[root@localhost ~]# date +%S       |    26</p>
-</li>
-<li><p>[root@localhost ~]# date +%F        |    2022-07-06</p>
-</li>
-<li><p>[root@localhost ~]# date +%T        |    11:36:58</p>
-</li>
-<li><p>[root@localhost ~]# date +%F_%T  |   2022-07-06_11:37:28</p>
+<li><pre><code>- 调用命令的结果作为文件名称使用
+
+- $(命令)
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">- # 查看时间</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    -  [root@localhost ~]# date         |   2022年 07月 06日 星期三 11:34:49 </span><br><span class="line">    </span><br><span class="line">    -  [root@localhost ~]# date +%Y   |   2022</span><br><span class="line">    </span><br><span class="line">    -  [root@localhost ~]# date +%m   |     07</span><br><span class="line">    </span><br><span class="line">    -  [root@localhost ~]# date +%d     |   06</span><br><span class="line">    </span><br><span class="line">    -  [root@localhost ~]# date +%H      |   11</span><br><span class="line">    </span><br><span class="line">    -  [root@localhost ~]# date +%M     |     36</span><br><span class="line">    </span><br><span class="line">    -  [root@localhost ~]# date +%S       |    26</span><br><span class="line">    </span><br><span class="line">    -  [root@localhost ~]# date +%F        |    2022-07-06</span><br><span class="line">    </span><br><span class="line">    -  [root@localhost ~]# date +%T        |    11:36:58</span><br><span class="line">    </span><br><span class="line">    -  [root@localhost ~]# date +%F_%T  |   2022-07-06_11:37:28</span><br></pre></td></tr></table></figure>
+</code></pre>
 </li>
 </ul>
 </li>
 <li><h1 id="查看Linux的发行版本"><a href="#查看Linux的发行版本" class="headerlink" title="查看Linux的发行版本"></a>查看Linux的发行版本</h1><ul>
-<li>cat  &#x2F;etc&#x2F;redhat-release</li>
-</ul>
+<li><pre><code>cat  /etc/redhat-release
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">    </span><br><span class="line">  </span><br><span class="line">- # 查看cpu的型号</span><br><span class="line">  </span><br><span class="line">  - ```</span><br><span class="line">    cat  /proc/cpuinfo</span><br></pre></td></tr></table></figure>
+</code></pre>
 </li>
-<li><h1 id="查看cpu的型号"><a href="#查看cpu的型号" class="headerlink" title="查看cpu的型号"></a>查看cpu的型号</h1><ul>
-<li>cat  &#x2F;proc&#x2F;cpuinfo</li>
 </ul>
 </li>
 <li><h1 id="查看cpu个数"><a href="#查看cpu个数" class="headerlink" title="查看cpu个数"></a>查看cpu个数</h1><ul>
-<li>nproc</li>
+<li><pre><code>nproc
+</code></pre>
+</li>
 </ul>
 </li>
 </ul>
@@ -830,7 +634,7 @@
     <div class="article-catelogue--wrapper">
       <div class="catelogue catelogue-1">
         <h3>目录</h3>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E7%BB%88%E7%AB%AF%EF%BC%88pts%EF%BC%89%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">1.</span> <span class="toc-text">虚拟终端（pts）快捷键</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#tty%E5%88%87%E6%8D%A2"><span class="toc-number">2.</span> <span class="toc-text">tty切换</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#xshell-%E5%B7%A5%E5%85%B7"><span class="toc-number">3.</span> <span class="toc-text">xshell 工具</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E7%BD%91%E5%8D%A1%E6%96%87%E4%BB%B6"><span class="toc-number">3.1.</span> <span class="toc-text">配置网卡文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E5%90%AF%E7%BD%91%E5%8D%A1"><span class="toc-number">3.2.</span> <span class="toc-text">重启网卡</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E7%BD%91%E5%8D%A1%E4%BF%A1%E6%81%AF"><span class="toc-number">3.3.</span> <span class="toc-text">查询网卡信息</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E7%9A%84%E7%BB%84%E6%88%90"><span class="toc-number">4.</span> <span class="toc-text">命令的组成</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%E8%AF%B4%E6%98%8E"><span class="toc-number">5.</span> <span class="toc-text">文件类型说明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B"><span class="toc-number">6.</span> <span class="toc-text">文件类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ls-%E7%9A%84%E5%8F%82%E6%95%B0"><span class="toc-number">7.</span> <span class="toc-text">ls  的参数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#cd%E7%9A%84%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E"><span class="toc-number">8.</span> <span class="toc-text">cd的使用说明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%B8%AE%E5%8A%A9%E7%9A%84%E6%96%B9%E6%B3%95%E2%80%98"><span class="toc-number">9.</span> <span class="toc-text">获取帮助的方法‘</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E5%88%86%E7%B1%BB"><span class="toc-number">10.</span> <span class="toc-text">命令分类:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E5%92%8C%E5%AE%9A%E4%B9%89%E5%88%AB%E5%90%8D"><span class="toc-number">11.</span> <span class="toc-text">查询和定义别名</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3%E4%BD%8D%E7%BD%AE"><span class="toc-number">12.</span> <span class="toc-text">帮助文档位置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#man%E6%89%8B%E5%86%8C"><span class="toc-number">13.</span> <span class="toc-text">man手册</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%8B-%E7%9A%84%E7%9B%AE%E5%BD%95%E5%8A%9F%E8%83%BD%E5%92%8C%E4%BD%9C%E7%94%A8"><span class="toc-number">14.</span> <span class="toc-text">&#x2F; 下 的目录功能和作用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="toc-number">15.</span> <span class="toc-text">查看文件的命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#less-%E5%91%BD%E4%BB%A4"><span class="toc-number">15.1.</span> <span class="toc-text">less 命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#more%E5%91%BD%E4%BB%A4"><span class="toc-number">15.2.</span> <span class="toc-text">more命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#head%E5%91%BD%E4%BB%A4-%E9%BB%98%E8%AE%A4%E5%89%8D%E5%8D%81%E8%A1%8C"><span class="toc-number">15.3.</span> <span class="toc-text">head命令    默认前十行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tail%E5%91%BD%E4%BB%A4-%E9%BB%98%E8%AE%A4%E5%90%8E%E5%8D%81%E8%A1%8C"><span class="toc-number">15.4.</span> <span class="toc-text">tail命令      默认后十行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cat-%E5%91%BD%E4%BB%A4"><span class="toc-number">15.5.</span> <span class="toc-text">cat  命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E8%A1%8C%E5%8F%B7"><span class="toc-number">15.5.1.</span> <span class="toc-text">查看行号</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86"><span class="toc-number">16.</span> <span class="toc-text">文件管理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8C%E6%AD%A5%E6%97%B6%E9%97%B4"><span class="toc-number">17.</span> <span class="toc-text">同步时间</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mkdir-%E5%88%9B%E5%BB%BA"><span class="toc-number">18.</span> <span class="toc-text">mkdir 创建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%AA%E5%88%87-%E6%8B%B7%E8%B4%9D"><span class="toc-number">19.</span> <span class="toc-text">剪切&#x2F;拷贝</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%A0%E9%99%A4"><span class="toc-number">20.</span> <span class="toc-text">删除</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E5%BC%95%E7%94%A8"><span class="toc-number">21.</span> <span class="toc-text">命令引用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%97%B6%E9%97%B4"><span class="toc-number">22.</span> <span class="toc-text">查看时间</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8BLinux%E7%9A%84%E5%8F%91%E8%A1%8C%E7%89%88%E6%9C%AC"><span class="toc-number">23.</span> <span class="toc-text">查看Linux的发行版本</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8Bcpu%E7%9A%84%E5%9E%8B%E5%8F%B7"><span class="toc-number">24.</span> <span class="toc-text">查看cpu的型号</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8Bcpu%E4%B8%AA%E6%95%B0"><span class="toc-number">25.</span> <span class="toc-text">查看cpu个数</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E7%BB%88%E7%AB%AF%EF%BC%88pts%EF%BC%89%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">1.</span> <span class="toc-text">虚拟终端（pts）快捷键</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#xshell-%E5%B7%A5%E5%85%B7"><span class="toc-number">2.</span> <span class="toc-text">xshell 工具</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E7%BD%91%E5%8D%A1%E6%96%87%E4%BB%B6"><span class="toc-number">2.1.</span> <span class="toc-text">配置网卡文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E7%BD%91%E5%8D%A1%E4%BF%A1%E6%81%AF"><span class="toc-number">2.2.</span> <span class="toc-text">查询网卡信息</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B%E8%AF%B4%E6%98%8E"><span class="toc-number">3.</span> <span class="toc-text">文件类型说明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ls-%E7%9A%84%E5%8F%82%E6%95%B0"><span class="toc-number">4.</span> <span class="toc-text">ls  的参数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%B8%AE%E5%8A%A9%E7%9A%84%E6%96%B9%E6%B3%95%E2%80%98"><span class="toc-number">5.</span> <span class="toc-text">获取帮助的方法‘</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E5%92%8C%E5%AE%9A%E4%B9%89%E5%88%AB%E5%90%8D"><span class="toc-number">6.</span> <span class="toc-text">查询和定义别名</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#man%E6%89%8B%E5%86%8C"><span class="toc-number">7.</span> <span class="toc-text">man手册</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="toc-number">8.</span> <span class="toc-text">查看文件的命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#less-%E5%91%BD%E4%BB%A4"><span class="toc-number">8.1.</span> <span class="toc-text">less 命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#head%E5%91%BD%E4%BB%A4-%E9%BB%98%E8%AE%A4%E5%89%8D%E5%8D%81%E8%A1%8C"><span class="toc-number">8.2.</span> <span class="toc-text">head命令    默认前十行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cat-%E5%91%BD%E4%BB%A4"><span class="toc-number">8.3.</span> <span class="toc-text">cat  命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E8%A1%8C%E5%8F%B7"><span class="toc-number">8.3.1.</span> <span class="toc-text">查看行号</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8C%E6%AD%A5%E6%97%B6%E9%97%B4"><span class="toc-number">9.</span> <span class="toc-text">同步时间</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%AA%E5%88%87-%E6%8B%B7%E8%B4%9D"><span class="toc-number">10.</span> <span class="toc-text">剪切&#x2F;拷贝</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E5%BC%95%E7%94%A8"><span class="toc-number">11.</span> <span class="toc-text">命令引用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8BLinux%E7%9A%84%E5%8F%91%E8%A1%8C%E7%89%88%E6%9C%AC"><span class="toc-number">12.</span> <span class="toc-text">查看Linux的发行版本</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8Bcpu%E4%B8%AA%E6%95%B0"><span class="toc-number">13.</span> <span class="toc-text">查看cpu个数</span></a></li></ol>
       </div>
       
         <div class="catelogue catelogue-2">
