@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>我的技术与生活——啥也不是4 | Hexo</title>
+  <title>我的技术与生活——运维 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="shortcut icon" href="/imgs/shortcut-icon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/css/public.css" />
@@ -16,7 +16,7 @@
 
   <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
   <script>
-    document.title = `我的技术与生活——啥也不是4`
+    document.title = `我的技术与生活——运维`
   </script>
 <meta name="generator" content="Hexo 7.2.0"></head>
 
@@ -351,149 +351,24 @@
 
 <div class="article-container">
   <div class="article">
-    <h1 class="article-title">啥也不是4</h1>
+    <h1 class="article-title">运维</h1>
     <div class="article-info">
       <div class="article-info--item">
         <div class="article-info--info">
           
-          <div class="article-info--categories">
-            <span>分类：</span>
-            
-          </div>
           
-          
-          <div class="article-info--tags">
-            <span>标签：</span>
-            
-          </div>
-          
-          <p class="article-info--date">日期：2024-06-16 18:06:52</p>
+          <p class="article-info--date">日期：2024-06-16 19:05:57</p>
         </div>
         <img src="/imgs/default-cover.webp" alt="" class="article-cover">
       </div>
     </div>
     <article class="article-content markdown-body">
-      <ul>
-<li><h1 id="基本权限"><a href="#基本权限" class="headerlink" title="基本权限"></a>基本权限</h1><ul>
-<li><pre><code>- ls -l initial-setup-ks.cfg
-
-- -rw-r--r--. 1 robin east 1278 7月  18 14:01 initial-setup-ks.cfg
-
-- 
-
-- rwx			rwx			rwx
-
-- user			group		        other
-
-- u			           g			            o
-
-- 
-
-- root-------&gt;user------&gt;group(附加组)-----&gt;other
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">- # 对于文件:</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    - r			读	cat  head tail....</span><br><span class="line">    </span><br><span class="line">    - w		写	vim  vi  &gt; &gt;&gt;</span><br><span class="line">    </span><br><span class="line">    - x		执行   root(x)  普通账号(r-x)</span><br></pre></td></tr></table></figure>
-</code></pre>
-</li>
-</ul>
-</li>
-<li><h1 id="对于目录"><a href="#对于目录" class="headerlink" title="对于目录:"></a>对于目录:</h1><ul>
-<li><pre><code>- r			读	ls			r   只能看文件名   r-x看详细信息
-
-- w		写	touch mkdir  rm    -wx可以删除确定文件名的文件   rwx删除所有文件
-
-- x		执行  cd
-
-- 
-
-- 一个能不能文件被删除,不取决于自身权限,而是取决于上层目录
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">- # 命令用法</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    - chmod u+r  file/dir</span><br><span class="line">    </span><br><span class="line">    - chmod u+r,g+w,o-x file/dir</span><br><span class="line">    </span><br><span class="line">    - chmod  ug+rw  file/dir</span><br><span class="line">    </span><br><span class="line">    - chmod ugo-rwx file/dir</span><br><span class="line">    </span><br><span class="line">    - chmod  a+rwx file/dir</span><br><span class="line">    </span><br><span class="line">    - chmod u=r  file/dir</span><br><span class="line">    </span><br><span class="line">    - chmod u=r,g=w,o=x file/dir</span><br><span class="line">    </span><br><span class="line">    - chmod ug=rw file/dir</span><br><span class="line">    </span><br><span class="line">    - chmod ugo=rwx file/dir</span><br><span class="line">    </span><br><span class="line">    - chmod a=rwx file/dir</span><br></pre></td></tr></table></figure>
-</code></pre>
-</li>
-</ul>
-</li>
-<li><h1 id="数字方式"><a href="#数字方式" class="headerlink" title="数字方式"></a>数字方式</h1><ul>
-<li><pre><code>- r	4
-
-- w	2
-
-- x	1
-
-- 
-
-- 
-
-- /				         	    r-xr-x-r-x			     555
-
-- /usr					    rwxr-xr-x			     755
-
-- /var					   rwxr-xr-x			       755
-
-- /etc					   rwxr-xr-x			        755
-
-- /tmp					 rwxrwxrwt	                	1777
-
-- /root					r-xr-x---			                  550
-
-- /home/robin			rwx------			           700
-
-- /etc/passwd			rw-r--r--		                    644
-
-- /etc/group		        	rw-r--r--		        	    644
-
-- /etc/shadow			 ---------		                	    000
-
-- root管理员创建文件		rw-r--r--			    644
-
-- root管理员创建目录		rwxr-xr-x			    755
-
-- 普通用户创建文件		rw-rw-r--			    664
-
-- 普通用户创建目录		rwxrwxr-x			    775
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">- # 权限反掩码 </span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    - root用户umask		0022</span><br><span class="line">    </span><br><span class="line">    - 普通用户umask		0002</span><br><span class="line">    </span><br><span class="line">    - </span><br><span class="line">    </span><br><span class="line">    - </span><br><span class="line">    </span><br><span class="line">    - 666	</span><br><span class="line">    </span><br><span class="line">    - 110 110 110</span><br><span class="line">    </span><br><span class="line">    - 023</span><br><span class="line">    </span><br><span class="line">    - 000 010 011    掩码取反</span><br><span class="line">    </span><br><span class="line">    - 111 101 100</span><br><span class="line">    </span><br><span class="line">    - 相与</span><br><span class="line">    </span><br><span class="line">    - 110 110 110</span><br><span class="line">    </span><br><span class="line">    - 111 101 100</span><br><span class="line">    </span><br><span class="line">    ------------------</span><br><span class="line">    </span><br><span class="line">    - 110 100 100  = 644  </span><br></pre></td></tr></table></figure>
-</code></pre>
-</li>
-</ul>
-</li>
-<li><h1 id="递归修改权限"><a href="#递归修改权限" class="headerlink" title="递归修改权限"></a>递归修改权限</h1><ul>
-<li><pre><code>[root@localhost tmp]# chmod -R 777 /tmp/test/
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">- # 修改拥有者与所属组:</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    - [root@localhost tmp]# chown robin aa.txt   修改拥有者</span><br><span class="line">    </span><br><span class="line">    - [root@localhost tmp]# chgrp zorro aa.txt    修改所属组</span><br><span class="line">    </span><br><span class="line">    - [root@localhost tmp]# chown root.root aa.txt   同时修改拥有者和所属组</span><br><span class="line">    </span><br><span class="line">    - 或</span><br><span class="line">    </span><br><span class="line">    - [root@localhost tmp]# chown root:root aa.txt   </span><br><span class="line">    </span><br><span class="line">    - [root@localhost tmp]# chown .zorro aa.txt   修改所属组</span><br><span class="line">    </span><br><span class="line">    - [root@localhost tmp]# chown :zorro aa.txt</span><br><span class="line">    </span><br><span class="line">    - [root@localhost tmp]# chown -R robin.zorro dir   递归修改拥有者所属组</span><br></pre></td></tr></table></figure>
-</code></pre>
-</li>
-</ul>
-</li>
-<li><h1 id="高级权限"><a href="#高级权限" class="headerlink" title="高级权限:"></a>高级权限:</h1><ul>
-<li><pre><code>- suid: set  user id
-
-- 功能: 任何用户再执行拥有suid权限的二进制可执行文件(命令)时,都以root管理员的身份去执行
-
-- 操作对象:   只能是拥有者  chmod  u+s file
-
-- 只能对文件(二进制可执行文件)
-
-- 
-
-- chmod u+s /bin/cat    所有用户都可以看/etc/shadow文件内容
-
-- 
-
-- sgid: set group id
-
-- 功能: 任何用户在拥有sgid权限的目录下创建的文件都要继承该目录的组
-
-- 操作对象:  只能所属组  chmod g+s dir
-
-- 只能对目录操作
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">- # sticky权限:</span><br><span class="line"></span><br><span class="line">  - ```</span><br><span class="line">    - 1.在/tmp目录下创建目录test  设置/tmp/test权限为777</span><br><span class="line">    </span><br><span class="line">    - [root@localhost ~]# chmod 777 /tmp/test/</span><br><span class="line">    </span><br><span class="line">    - 2.添加用户robin </span><br><span class="line">    </span><br><span class="line">    - </span><br><span class="line">    </span><br><span class="line">    - 切换robin用户创建文件/tmp/test/aa.txt   </span><br><span class="line">    </span><br><span class="line">    - 添加用户zorro</span><br><span class="line">    </span><br><span class="line">    - </span><br><span class="line">    </span><br><span class="line">    - 切换到zorro用户, 能不能删除/tmp/test/aa.txt</span><br><span class="line">    </span><br><span class="line">    - 能删除</span><br><span class="line">    </span><br><span class="line">    - </span><br><span class="line">    </span><br><span class="line">    - 3.root在/tmp/test目录上添加t权限</span><br><span class="line">    </span><br><span class="line">    - ​    切换robin用户创建文件/tmp/test/aa.txt </span><br><span class="line">    </span><br><span class="line">    - 切换到zorro用户, 能不能删除/tmp/test/aa.txt</span><br><span class="line">    </span><br><span class="line">    - 不能删除</span><br><span class="line">    </span><br><span class="line">    - </span><br><span class="line">    </span><br><span class="line">    - 4.root用户可不可删除其他用户在/tmp/test目录下创建的文件</span><br><span class="line">    </span><br><span class="line">    - 可以删除</span><br><span class="line">    </span><br><span class="line">    - </span><br><span class="line">    </span><br><span class="line">    - 5.添加用户king 修改/tmp/test目录的拥有者为king king能不能删除其他用户创建的文件</span><br><span class="line">    </span><br><span class="line">    - 可以删除</span><br></pre></td></tr></table></figure>
-</code></pre>
-</li>
-</ul>
-</li>
-</ul>
-
+      
     </article>
     
     <div class="read-nums">
       <!-- id 将作为查询条件 -->
-      <span id="2024/06/16/啥也不是4/" class="leancloud_visitors" data-flag-title="Your Article Title">
+      <span id="运维/index-1.html" class="leancloud_visitors" data-flag-title="Your Article Title">
         <em class="post-meta-item-text">浏览量</em>
         <i class="leancloud-visitors-count"></i>
       </span>
@@ -509,18 +384,8 @@
     <div class="article-catelogue--wrapper">
       <div class="catelogue catelogue-1">
         <h3>目录</h3>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%9D%83%E9%99%90"><span class="toc-number">1.</span> <span class="toc-text">基本权限</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AF%B9%E4%BA%8E%E7%9B%AE%E5%BD%95"><span class="toc-number">2.</span> <span class="toc-text">对于目录:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E6%96%B9%E5%BC%8F"><span class="toc-number">3.</span> <span class="toc-text">数字方式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%92%E5%BD%92%E4%BF%AE%E6%94%B9%E6%9D%83%E9%99%90"><span class="toc-number">4.</span> <span class="toc-text">递归修改权限</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E6%9D%83%E9%99%90"><span class="toc-number">5.</span> <span class="toc-text">高级权限:</span></a></li></ol>
+        
       </div>
-      
-        <div class="catelogue catelogue-2">
-           
-          
-            <p>
-              <span>下一篇</span>
-              <a href="/2024/06/16/啥也不是3/">啥也不是3</a>
-            </p>
-          
-        </div>
       
     </div>
   </div>
@@ -539,7 +404,7 @@
     recordIP: config.recordIP,
     visitor: config.visitor,
     enableQQ: config.enableQQ,
-    path: '2024/06/16/啥也不是4/'
+    path: '运维/index-1.html'
   })
 </script>
 
