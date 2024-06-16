@@ -193,7 +193,7 @@
   const ipt = document.querySelector('#search-input')
   const btn = document.querySelector('#search-btn')
   const layer = document.querySelector('#search-layer')
-  const posts = JSON.parse(`[{"title":"啥也不是","path":"2024/06/16/啥也不是/"},{"title":"Hello World","path":"2024/06/16/hello-world/"},{"title":"啥也不是2","path":"2024/06/16/啥也不是2/"},{"title":"啥也不是4","path":"2024/06/16/啥也不是4/"},{"title":"啥也不是3","path":"2024/06/16/啥也不是3/"}]`)
+  const posts = JSON.parse(`[{"title":"Hello World","path":"2024/06/16/hello-world/"},{"title":"啥也不是","path":"2024/06/16/啥也不是/"},{"title":"啥也不是2","path":"2024/06/16/啥也不是2/"},{"title":"啥也不是3","path":"2024/06/16/啥也不是3/"},{"title":"啥也不是4","path":"2024/06/16/啥也不是4/"}]`)
   ipt.addEventListener('keyup', e => {
     if (e.key === 'Enter') {
       handleSearch()
@@ -264,7 +264,7 @@
         </a>
         <a href="/tags">
           <div>
-            <span>0</span>
+            <span>1</span>
             <span>标签</span>
           </div>
         </a>
@@ -361,6 +361,10 @@
           <div>
             
             
+              <p>
+                <a class="-link" href="/tags/%E8%BF%90%E7%BB%B4/" rel="tag">运维</a>
+              </p>
+            
           </div>
           <div class="bg"></div>
         </div>
@@ -433,7 +437,7 @@
   <div class="index-right">
     <div class="index-right-wrapper">
       
-      
+      <ul class="tags" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%90%E7%BB%B4/" rel="tag">运维</a></li></ul>
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/06/">2024年06月</a><span class="archive-list-count">5</span></li></ul>
     </div>
   </div>
