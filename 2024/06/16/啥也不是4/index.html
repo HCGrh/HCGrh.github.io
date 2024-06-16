@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>我的技术与生活——啥也不是 | Hexo</title>
+  <title>我的技术与生活——啥也不是4 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="shortcut icon" href="/imgs/shortcut-icon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/css/public.css" />
@@ -16,7 +16,7 @@
 
   <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
   <script>
-    document.title = `我的技术与生活——啥也不是`
+    document.title = `我的技术与生活——啥也不是4`
   </script>
 <meta name="generator" content="Hexo 7.2.0"></head>
 
@@ -351,7 +351,7 @@
 
 <div class="article-container">
   <div class="article">
-    <h1 class="article-title">啥也不是</h1>
+    <h1 class="article-title">啥也不是4</h1>
     <div class="article-info">
       <div class="article-info--item">
         <div class="article-info--info">
@@ -367,478 +367,233 @@
             
           </div>
           
-          <p class="article-info--date">日期：2024-06-16 13:31:19</p>
+          <p class="article-info--date">日期：2024-06-16 18:06:52</p>
         </div>
         <img src="/imgs/default-cover.webp" alt="" class="article-cover">
       </div>
     </div>
     <article class="article-content markdown-body">
       <ul>
-<li><p>虚拟终端（pts）快捷键</p>
+<li><p>基本权限</p>
 <ul>
-<li><p>shift+ctrl+ +  扩大</p>
+<li><p>ls -l initial-setup-ks.cfg</p>
 </li>
-<li><p>ctrl + - 缩小</p>
-</li>
-<li><p>shift+ctrl + t  新标签</p>
-</li>
-<li><p>alt+ 1    2    3    切换标签</p>
-</li>
-<li><p>shift+ctrl+w  关闭标签</p>
-</li>
-<li><p>alt+ F4  关闭终端</p>
-</li>
-</ul>
-</li>
-<li><p>tty切换</p>
-<ul>
-<li><p>ctrl + alt F2 - F6   或者 ctrl + alt + Fn  F2 - F6</p>
-</li>
-<li><p>切换到桌面    alt + F1  或者  Fn + alt + F1</p>
-</li>
-</ul>
-</li>
-<li><p>xshell 工具</p>
-<ul>
-<li><p>配置网卡文件</p>
-<ul>
-<li>vim  &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-ens33</li>
-</ul>
-</li>
-<li><p>重启网卡</p>
-<ul>
-<li>systemctl  restart  network</li>
-</ul>
-</li>
-<li><p>查询网卡信息</p>
-<ul>
-<li><p>ip  addr   show   ens33</p>
-</li>
-<li><p>ip a</p>
-</li>
-<li><p>ifconfig</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>命令的组成</p>
-<ul>
-<li><p>[root@localhost ~]# 命令  -[参数…..]  [file…..]</p>
-</li>
-<li><p>root    当前用户</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://localhost/">localhost</a>  主机名</p>
-</li>
-<li><p>~  表示当前位置</p>
-</li>
-<li><p>#表示root用户  $ 表示 普通用户</p>
-</li>
-</ul>
-</li>
-<li><p>文件类型说明</p>
-<ul>
-<li><p>- # rw——-# . #1 #root #root #1647 #7月  17 18:52# anaconda-ks.cfg</p>
-</li>
-<li><p>第一列：文件类型</p>
-</li>
-<li><p>第二列：基本权限</p>
-</li>
-<li><p>第三列：是否在开启selinux环境下创建</p>
-</li>
-<li><p>第四列：硬链接数</p>
-</li>
-<li><p>第五列：文件拥有者</p>
-</li>
-<li><p>第六列：文件所属组</p>
-</li>
-<li><p>第七列：文件大小</p>
-</li>
-<li><p>第八列：最后一次修改时间</p>
-</li>
-<li><p>第九列：文件名</p>
-</li>
-</ul>
-</li>
-<li><p>文件类型</p>
-<ul>
-<li><p>-  普通文件  regular</p>
-</li>
-<li><p>d 目录文件  directory</p>
-</li>
-<li><p>l  符号链接   symbolic  又称 软连接</p>
-</li>
-<li><p>s  套接字文件  socket   unxi套接字和tcp套接字</p>
-</li>
-<li><p>p  管道文件   pipe</p>
-</li>
-<li><p>c  字符设备文件   character</p>
-</li>
-<li><p>b  块设备文件   block  (硬盘   U盘   光盘)</p>
-</li>
-</ul>
-</li>
-<li><p>ls  的参数</p>
-<ul>
-<li><p>-l   log    长格式信息</p>
-</li>
-<li><p>-a  显示所有文件</p>
-</li>
-<li><p>-h  按最大单位显示</p>
-</li>
-<li><p>-S  按大小排序(默认降序)</p>
-</li>
-<li><p>-r  逆序 reverse</p>
-</li>
-<li><p>-t  时间</p>
-</li>
-<li><p>-R  递归   recursive</p>
-</li>
-<li><p>-d  查看目录信息</p>
-</li>
-<li><p>-i  显示文件的inode号</p>
-</li>
-<li><p>-A  显示所有文件   不包括 隐藏文件</p>
-</li>
-</ul>
-</li>
-<li><p>cd的使用说明</p>
-<ul>
-<li><p>cd    切换路径   切换目录</p>
-<ul>
-<li><p>绝对路径：从&#x2F; 开始  的路径 是绝对路径</p>
-</li>
-<li><p>相对路径：从当前目录开始  是相对路径</p>
-</li>
-</ul>
-</li>
-<li><p>cd ..   返回上一层目录</p>
-</li>
-<li><p>cd .  刷新</p>
-</li>
-<li><p>cd  ..&#x2F;..   返回上层的上层</p>
-</li>
-<li><p>cd ~  返回家目录     cd   回车 也可以</p>
-</li>
-<li><p>cd  -   返回上次工作目录</p>
-</li>
-<li><p>pwd  显示当前目录</p>
-</li>
-</ul>
-</li>
-<li><p>获取帮助的方法‘</p>
-<ul>
-<li><p>ls  –help     获取 ls   的  参数</p>
-</li>
-<li><p>info    ls</p>
-</li>
-<li><p>type  ls</p>
-</li>
-</ul>
-</li>
-<li><p>命令分类:</p>
-<ul>
-<li><p>内部命令：cd是 shell的内嵌</p>
-</li>
-<li><p>外部命令：cat是 &#x2F;usr&#x2F;bin&#x2F;cat</p>
-</li>
-<li><p>别名：ls  是  ’ls –color&#x3D;auto‘ 的别名</p>
-<ul>
-<li><p>别名&gt;外部&gt;内部 </p>
-</li>
-<li><p>别名 &gt; 外部</p>
-</li>
-<li><p>别名&gt; 内部</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>查询和定义别名</p>
-<ul>
-<li><p>alias   查询系统中所有的别名</p>
-</li>
-<li><p>alias  la &#x3D; ’ls  -lah‘   临时定义别名</p>
-</li>
-<li><p>unallas  la  释放别名</p>
-</li>
-</ul>
-</li>
-<li><p>帮助文档位置</p>
-<ul>
-<li>&#x2F;usr&#x2F;share&#x2F;doc&#x2F; 的目录下</li>
-</ul>
-</li>
-<li><p>man手册</p>
-<ul>
-<li><p>man  1  用户命令</p>
-</li>
-<li><p>man  2  系统调用</p>
-</li>
-<li><p>man  3  库调用</p>
-</li>
-<li><p>man  4  特殊文件</p>
-</li>
-<li><p>man  5  配置文件</p>
-</li>
-<li><p>man  6  游戏</p>
-</li>
-<li><p>man  7  杂项   man  7  man</p>
-</li>
-<li><p>man  8  系统命令</p>
-</li>
-<li><p>man  -f  passwd   查看解释</p>
-</li>
-<li><p>man  -k  passwd    模糊查询</p>
-</li>
-</ul>
-</li>
-<li><p>&#x2F; 下 的目录功能和作用</p>
-<ul>
-<li><p>&#x2F;bin   用户可执行目录</p>
-</li>
-<li><p>&#x2F;sbin   系统可执行目录</p>
-</li>
-<li><p>&#x2F;lib    32为库文件目录</p>
-</li>
-<li><p>&#x2F;lib64    64位库文件目录</p>
-</li>
-<li><p>&#x2F;proc    伪文件系统，内存中的信息和内核参数，硬件信息</p>
-</li>
-<li><p>&#x2F;sys       伪文件系统，内存中的信息和内核参数，硬件信息</p>
-</li>
-<li><p>&#x2F;usr       应用程序目录</p>
-</li>
-<li><p>&#x2F;etc      配置文件目录</p>
-</li>
-<li><p>&#x2F;var     日志和数据文件目录</p>
-</li>
-<li><p>&#x2F;boot    启动程序目录以及启动时所需要的文件</p>
-</li>
-<li><p>&#x2F;root     root 的家目录</p>
-</li>
-<li><p>&#x2F;home   普通用户的家目录</p>
-</li>
-<li><p>&#x2F;dev        块设备和字符设备文件目录</p>
-</li>
-<li><p>&#x2F;run       进程号与锁文件目录</p>
-</li>
-<li><p>tmp        临时文件目录</p>
-</li>
-<li><p>&#x2F;mnt      其他挂载点</p>
-</li>
-<li><p>&#x2F;opt      第三方软件目录</p>
-</li>
-<li><p>&#x2F;media     媒介目录</p>
-</li>
-<li><p>&#x2F;srv       服务器数据目录</p>
-</li>
-</ul>
-</li>
-<li><p>查看文件的命令</p>
-<ul>
-<li><p>less 命令</p>
-<ul>
-<li>less &#x2F;root&#x2F;anaconda-ks.cfg</li>
-</ul>
-</li>
-<li><p>more命令</p>
-<ul>
-<li><p>more &#x2F;root&#x2F;anaconda-ks.cfg</p>
-</li>
-<li><p>回车   下一行</p>
-</li>
-<li><p>空格    下一页</p>
-</li>
-<li><p>b           上一页</p>
-</li>
-<li><p>q           退出</p>
-</li>
-</ul>
-</li>
-<li><p>head命令    默认前十行</p>
-<ul>
-<li><p>head &#x2F;root&#x2F;anaconda-ks.cfg</p>
-</li>
-<li><p>查看 前二十行</p>
-<ul>
-<li><p>head  -n 20 &#x2F;root&#x2F;anaconda-ks.cfg</p>
-</li>
-<li><p>head  -20 &#x2F;root&#x2F;anaconda-ks.cfg</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>tail命令      默认后十行</p>
-<ul>
-<li><p>tail &#x2F;root&#x2F;anaconda-ks.cfg</p>
-</li>
-<li><p>查看   后二十行</p>
-<ul>
-<li><p>tail -n 20 &#x2F;root&#x2F;anaconda-ks.cfg</p>
-</li>
-<li><p>tail -20 &#x2F;root&#x2F;anaconda-ks.cfg</p>
-</li>
-<li><p>使用 tail  查看 监控日志</p>
-</li>
-<li><p>tail -f &#x2F;var&#x2F;log&#x2F;messages</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>cat  命令</p>
-<ul>
-<li><p>查看行号</p>
-<ul>
-<li><p>cat -n  &#x2F;root&#x2F;anaconda-ks.cfg    -n  显示所有行号</p>
-</li>
-<li><p>cat -b  &#x2F;root&#x2F;anaconda-ks.cfg   -b   显示有效行号</p>
-</li>
-<li><p>管道符    |       将前一个命令的输出 作为 后一个命令的输入</p>
-</li>
-<li><p>cat -n &#x2F;root&#x2F;anaconda-ks.cfg | les</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>文件管理</p>
-<ul>
-<li><p>touch  命令</p>
-</li>
-<li><p>创建一个  文件</p>
-</li>
-<li><p>touch  a.txt</p>
-</li>
-<li><p>创建多个文件</p>
-</li>
-<li><p>touch  a.txt  b.txt</p>
-</li>
-<li><p>touch  {a,b,c}{1,2,3}.txt</p>
-</li>
-</ul>
-</li>
-<li><p>同步时间</p>
-<ul>
-<li><p>ntpdate  <a target="_blank" rel="noopener" href="http://ntp.aliyun.com/">ntp.aliyun.com</a></p>
-</li>
-<li><p>修改时间   touch -d  “2023-07-17  16:37:00”  abc.txt</p>
-</li>
-</ul>
-</li>
-<li><p>mkdir 创建</p>
-<ul>
-<li><p>mkdir   abc</p>
-</li>
-<li><p>mkdir  abc    bac</p>
-</li>
-<li><p>mkdir  &#x2F;usr&#x2F;abc&#x2F;abc&#x2F;abc   -pv</p>
-</li>
-<li><p>-p   递归创建</p>
-</li>
-<li><p>-v  显示过程</p>
-</li>
-</ul>
-</li>
-<li><p>剪切&#x2F;拷贝</p>
-<ul>
-<li><p>cp    源文件地址  目标地址</p>
-</li>
-<li><p>cp &#x2F;root&#x2F;abc.txt &#x2F;tmp&#x2F;</p>
-</li>
-<li><p>拷贝过程中可以重命名</p>
-</li>
-<li><p>cp &#x2F;root&#x2F;abcd.txt &#x2F;tmp&#x2F;xxxx.txt</p>
-</li>
-<li><p>-r    递归拷贝</p>
-</li>
-<li><p>cp -r  &#x2F;root&#x2F;abc&#x2F; &#x2F;tmp&#x2F;    </p>
-</li>
-<li><p>cp -r  &#x2F;root&#x2F;abc&#x2F; &#x2F;tmp&#x2F;yyyy</p>
+<li><p>-rw-r–r–. 1 robin east 1278 7月  18 14:01 initial-setup-ks.cfg</p>
 </li>
 <li></li>
-<li><p>mv    源文件地址   目标地址</p>
+<li><p>rwx			rwx			rwx</p>
 </li>
-<li><p>mv &#x2F;root&#x2F;abce.txt &#x2F;tmp&#x2F;</p>
+<li><p>user			group		        other</p>
 </li>
-<li><p>重命名</p>
+<li><p>u			           g			            o</p>
 </li>
-<li><p>mv &#x2F;root&#x2F;abc.txt &#x2F;root&#x2F;xyz.txt</p>
-</li>
-<li><p>移动目录</p>
-</li>
-<li><p>mv &#x2F;root&#x2F;abcd &#x2F;tmp&#x2F;</p>
+<li></li>
+<li><p>root——-&gt;user——&gt;group(附加组)—–&gt;other</p>
 </li>
 </ul>
 </li>
-<li><p>删除</p>
+<li><p>对于文件:</p>
 <ul>
-<li><p>rmdir    只能删除空目录</p>
+<li><p>r			读	cat  head tail….</p>
 </li>
-<li><p>rmdir &#x2F;root&#x2F;a1</p>
+<li><p>w		写	vim  vi  &gt; &gt;&gt;</p>
 </li>
-<li><p>-f    强制删除</p>
-</li>
-<li><p>rm -f &#x2F;root&#x2F;abc2.tx</p>
-</li>
-<li><p>-r   递归删除</p>
-</li>
-<li><p>rm -rf &#x2F;root&#x2F;abc1 </p>
-</li>
-<li><p>* 匹配所有字符</p>
-</li>
-<li><p>rm -rf &#x2F;root&#x2F;*.txt</p>
+<li><p>x		执行   root(x)  普通账号(r-x)</p>
 </li>
 </ul>
 </li>
-<li><p>命令引用</p>
+<li><p>对于目录:</p>
 <ul>
-<li><p>调用命令的结果作为文件名称使用</p>
+<li><p>r			读	ls			r   只能看文件名   r-x看详细信息</p>
 </li>
-<li><p>$(命令)</p>
+<li><p>w		写	touch mkdir  rm    -wx可以删除确定文件名的文件   rwx删除所有文件</p>
+</li>
+<li><p>x		执行  cd</p>
+</li>
+<li></li>
+<li><p>一个能不能文件被删除,不取决于自身权限,而是取决于上层目录</p>
 </li>
 </ul>
 </li>
-<li><p>查看时间</p>
+<li><p>命令用法</p>
 <ul>
-<li><p>[root@localhost ~]# date         |   2022年 07月 06日 星期三 11:34:49 </p>
+<li><p>chmod u+r  file&#x2F;dir</p>
 </li>
-<li><p>[root@localhost ~]# date +%Y   |   2022</p>
+<li><p>chmod u+r,g+w,o-x file&#x2F;dir</p>
 </li>
-<li><p>[root@localhost ~]# date +%m   |     07</p>
+<li><p>chmod  ug+rw  file&#x2F;dir</p>
 </li>
-<li><p>[root@localhost ~]# date +%d     |   06</p>
+<li><p>chmod ugo-rwx file&#x2F;dir</p>
 </li>
-<li><p>[root@localhost ~]# date +%H      |   11</p>
+<li><p>chmod  a+rwx file&#x2F;dir</p>
 </li>
-<li><p>[root@localhost ~]# date +%M     |     36</p>
+<li><p>chmod u&#x3D;r  file&#x2F;dir</p>
 </li>
-<li><p>[root@localhost ~]# date +%S       |    26</p>
+<li><p>chmod u&#x3D;r,g&#x3D;w,o&#x3D;x file&#x2F;dir</p>
 </li>
-<li><p>[root@localhost ~]# date +%F        |    2022-07-06</p>
+<li><p>chmod ug&#x3D;rw file&#x2F;dir</p>
 </li>
-<li><p>[root@localhost ~]# date +%T        |    11:36:58</p>
+<li><p>chmod ugo&#x3D;rwx file&#x2F;dir</p>
 </li>
-<li><p>[root@localhost ~]# date +%F_%T  |   2022-07-06_11:37:28</p>
+<li><p>chmod a&#x3D;rwx file&#x2F;dir</p>
 </li>
 </ul>
 </li>
-<li><p>查看Linux的发行版本</p>
+<li><p>数字方式</p>
 <ul>
-<li>cat  &#x2F;etc&#x2F;redhat-release</li>
+<li><p>r	4</p>
+</li>
+<li><p>w	2</p>
+</li>
+<li><p>x	1</p>
+</li>
+<li></li>
+<li></li>
+<li><p>&#x2F;				         	    r-xr-x-r-x			     555</p>
+</li>
+<li><p>&#x2F;usr					    rwxr-xr-x			     755</p>
+</li>
+<li><p>&#x2F;var					   rwxr-xr-x			       755</p>
+</li>
+<li><p>&#x2F;etc					   rwxr-xr-x			        755</p>
+</li>
+<li><p>&#x2F;tmp					 rwxrwxrwt	                	1777</p>
+</li>
+<li><p>&#x2F;root					r-xr-x—			                  550</p>
+</li>
+<li><p>&#x2F;home&#x2F;robin			rwx——			           700</p>
+</li>
+<li><p>&#x2F;etc&#x2F;passwd			rw-r–r–		                    644</p>
+</li>
+<li><p>&#x2F;etc&#x2F;group		        	rw-r–r–		        	    644</p>
+</li>
+<li><p>&#x2F;etc&#x2F;shadow			 ———		                	    000</p>
+</li>
+<li><p>root管理员创建文件		rw-r–r–			    644</p>
+</li>
+<li><p>root管理员创建目录		rwxr-xr-x			    755</p>
+</li>
+<li><p>普通用户创建文件		rw-rw-r–			    664</p>
+</li>
+<li><p>普通用户创建目录		rwxrwxr-x			    775</p>
+</li>
 </ul>
 </li>
-<li><p>查看cpu的型号</p>
+<li><p>权限反掩码 </p>
 <ul>
-<li>cat  &#x2F;proc&#x2F;cpuinfo</li>
+<li><p>root用户umask		0022</p>
+</li>
+<li><p>普通用户umask		0002</p>
+</li>
+<li></li>
+<li></li>
+<li><p>666	</p>
+</li>
+<li><p>110 110 110</p>
+</li>
+<li><p>023</p>
+</li>
+<li><p>000 010 011    掩码取反</p>
+</li>
+<li><p>111 101 100</p>
+</li>
+<li><p>相与</p>
+</li>
+<li><p>110 110 110</p>
+</li>
+<li><p>111 101 100</p>
+</li>
+<li><p>-—————-</p>
+</li>
+<li><p>110 100 100  &#x3D; 644</p>
+</li>
 </ul>
 </li>
-<li><p>查看cpu个数 </p>
+<li><p>递归修改权限</p>
 <ul>
-<li>nproc</li>
+<li>[root@localhost tmp]# chmod -R 777 &#x2F;tmp&#x2F;test&#x2F;</li>
 </ul>
+</li>
+<li><p>修改拥有者与所属组:</p>
+<ul>
+<li><p>[root@localhost tmp]# chown robin aa.txt   修改拥有者</p>
+</li>
+<li><p>[root@localhost tmp]# chgrp zorro aa.txt    修改所属组</p>
+</li>
+<li><p>[root@localhost tmp]# chown root.root aa.txt   同时修改拥有者和所属组</p>
+</li>
+<li><p>或</p>
+</li>
+<li><p>[root@localhost tmp]# chown root:root aa.txt   </p>
+</li>
+<li><p>[root@localhost tmp]# chown .zorro aa.txt   修改所属组</p>
+</li>
+<li><p>[root@localhost tmp]# chown :zorro aa.txt</p>
+</li>
+<li><p>[root@localhost tmp]# chown -R robin.zorro dir   递归修改拥有者所属组</p>
+</li>
+</ul>
+</li>
+<li><p>高级权限:</p>
+<ul>
+<li><p>suid: set  user id</p>
+</li>
+<li><p>功能: 任何用户再执行拥有suid权限的二进制可执行文件(命令)时,都以root管理员的身份去执行</p>
+</li>
+<li><p>操作对象:   只能是拥有者  chmod  u+s file</p>
+</li>
+<li><p>只能对文件(二进制可执行文件)</p>
+</li>
+<li></li>
+<li><p>chmod u+s &#x2F;bin&#x2F;cat    所有用户都可以看&#x2F;etc&#x2F;shadow文件内容</p>
+</li>
+<li></li>
+<li><p>sgid: set group id</p>
+</li>
+<li><p>功能: 任何用户在拥有sgid权限的目录下创建的文件都要继承该目录的组</p>
+</li>
+<li><p>操作对象:  只能所属组  chmod g+s dir</p>
+</li>
+<li><p>只能对目录操作</p>
+</li>
+</ul>
+</li>
+<li><p>sticky权限:</p>
+<ul>
+<li><p>1.在&#x2F;tmp目录下创建目录test  设置&#x2F;tmp&#x2F;test权限为777</p>
+</li>
+<li><p>[root@localhost ~]# chmod 777 &#x2F;tmp&#x2F;test&#x2F;</p>
+</li>
+<li><p>2.添加用户robin </p>
+</li>
+<li></li>
+<li><p>切换robin用户创建文件&#x2F;tmp&#x2F;test&#x2F;aa.txt   </p>
+</li>
+<li><p>添加用户zorro</p>
+</li>
+<li></li>
+<li><p>切换到zorro用户, 能不能删除&#x2F;tmp&#x2F;test&#x2F;aa.txt</p>
+</li>
+<li><p>能删除</p>
+</li>
+<li></li>
+<li><p>3.root在&#x2F;tmp&#x2F;test目录上添加t权限</p>
+</li>
+<li><p>​    切换robin用户创建文件&#x2F;tmp&#x2F;test&#x2F;aa.txt </p>
+</li>
+<li><p>切换到zorro用户, 能不能删除&#x2F;tmp&#x2F;test&#x2F;aa.txt</p>
+</li>
+<li><p>不能删除</p>
+</li>
+<li></li>
+<li><p>4.root用户可不可删除其他用户在&#x2F;tmp&#x2F;test目录下创建的文件</p>
+</li>
+<li><p>可以删除</p>
+</li>
+<li></li>
+<li><p>5.添加用户king 修改&#x2F;tmp&#x2F;test目录的拥有者为king king能不能删除其他用户创建的文件</p>
+</li>
+<li><p>可以删除</p>
 </li>
 </ul>
 </li>
@@ -848,7 +603,7 @@
     
     <div class="read-nums">
       <!-- id 将作为查询条件 -->
-      <span id="2024/06/16/啥也不是/" class="leancloud_visitors" data-flag-title="Your Article Title">
+      <span id="2024/06/16/啥也不是4/" class="leancloud_visitors" data-flag-title="Your Article Title">
         <em class="post-meta-item-text">浏览量</em>
         <i class="leancloud-visitors-count"></i>
       </span>
@@ -868,16 +623,11 @@
       </div>
       
         <div class="catelogue catelogue-2">
-          
-            <p>
-              <span>上一篇：</span>
-              <a href="/2024/06/16/啥也不是2/">啥也不是2</a>
-            </p>
            
           
             <p>
               <span>下一篇</span>
-              <a href="/2024/06/16/hello-world/">Hello World</a>
+              <a href="/2024/06/16/啥也不是3/">啥也不是3</a>
             </p>
           
         </div>
@@ -899,7 +649,7 @@
     recordIP: config.recordIP,
     visitor: config.visitor,
     enableQQ: config.enableQQ,
-    path: '2024/06/16/啥也不是/'
+    path: '2024/06/16/啥也不是4/'
   })
 </script>
 
